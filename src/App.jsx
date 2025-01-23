@@ -7,11 +7,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className=" bg-[#f4f5ff] min-h-screen overflow-hidden">
+      <div className=" bg-[#f4f5ff] min-h-screen overflow-hidden font-poppins">
         <HeroSection />
-        {/* <div className=" shadow-lg shadow-[#7b7878] py-6 px-8 rounded-lg w-1/4">
-          
-        </div> */}
         <About />
         <Footer />
       </div>
