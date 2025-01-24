@@ -53,7 +53,6 @@ function FormAdmission() {
       const result = await response.json();
       
       if (result.success) {
-        console.log(data);
         toast.success("Message sent Successfully");
         form.reset();
         navigate("/thankyou");
@@ -69,7 +68,7 @@ function FormAdmission() {
 
   return (
     <div className=" w-[380px] overflow-hidden space-y-8 bg-[rgba(255,255,255,0.2)] backdrop-blur-lg  rounded-lg">
-      <h2 className=" text-2xl text-center font-bold text-orange-500 my-4">
+      <h2 className=" text-2xl text-center font-bold text-white my-4">
         Admission Form
       </h2>
       <Form {...form}>
@@ -202,7 +201,7 @@ function FormAdmission() {
                     id="terms_and_conditions"
                     checked={field.value}
                     onCheckedChange={field.onChange}
-                    className=" border-gray-200 data-[state=checked]:bg-orange-500 data-[state=checked]:border-white"
+                    className=" border-gray-200 data-[state=checked]:bg-blue-500 data-[state=checked]:border-white"
                   />
                   <div className="grid gap-1.5 leading-none">
                     <label
@@ -219,7 +218,7 @@ function FormAdmission() {
           />
           <Button
             type="submit"
-            className={`bg-orange-500 text-gray-200 hover:bg-orange-300 hover:text-gray-800 w-full mt-3 ${isSubmitting ? "cursor-not-allowed" : ""}`}
+            className={`bg-blue-500 text-gray-200 hover:bg-blue-400 duration-200 hover:text-gray-800 w-full mt-3 ${isSubmitting ? "cursor-not-allowed" : ""}`}
           >
             {isSubmitting ? "Sending" : "Send Message"}
           </Button>

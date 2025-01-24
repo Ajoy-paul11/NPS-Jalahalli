@@ -7,7 +7,7 @@ import Tagline from "./Tagline";
 
 function HeroSection() {
   return (
-    <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${school})` }} className=" bg-cover bg-center bg-no-repeat xl:h-screen">
+    <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(${school})` }} className=" bg-cover bg-center bg-no-repeat xl:h-screen">
       <div className="  p-4 flex flex-col lg:flex-row lg:justify-evenly items-center gap-4">
         <div>
           <img
@@ -25,7 +25,7 @@ function HeroSection() {
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8">
         <div className=" px-4 order-2 lg:order-1">
-          <h1 className=" text-4xl text-blue mb-6 font-bold">
+          <h1 className=" text-4xl text-white mb-6 font-bold">
             Best CBSE School in Jalahalli
           </h1>
           <p className=" text-lg text-white my-2 indent-8">
