@@ -128,7 +128,7 @@ function FormAdmission() {
   return (
     <div className=" w-[380px] overflow-hidden space-y-8 bg-[rgba(255,255,255,0.2)] backdrop-blur-lg  rounded-lg">
       <h2 className=" text-2xl text-center font-bold text-white my-4">
-        Admission Form
+        Admission Form <br />for <span className=" text-blue">2025-26</span>
       </h2>
       <Form {...form}>
         <form
@@ -161,7 +161,7 @@ function FormAdmission() {
                     placeholder="Student Name..."
                     required
                     {...field}
-                    className=" text-gray-200"
+                    className=" placeholder:text-white"
                   />
                 </div>
               </FormItem>
@@ -182,7 +182,7 @@ function FormAdmission() {
                     placeholder="Email Address..."
                     required
                     {...field}
-                    className=" text-gray-200"
+                    className=" placeholder:text-white"
                   />
                 </div>
               </FormItem>
@@ -203,7 +203,7 @@ function FormAdmission() {
                     placeholder="Phone Number..."
                     required
                     {...field}
-                    className=" text-gray-200"
+                    className=" placeholder:text-white"
                     maxLength={10}
                     minLength={10}
                     // onChange={(e) => {
