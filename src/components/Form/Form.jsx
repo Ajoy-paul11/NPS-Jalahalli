@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import {
   Form,
@@ -23,9 +23,16 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "react-toastify";
+// import OTPInput from "react-otp-input";
 
 function FormAdmission() {
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [showOtpField, setShowOtpField] = useState(false);
+  // const [otp, setOtp] = useState("");
+  // const [isVerified, setIsVerified] = useState(false);
+  // const [countdown, setCountdown] = useState(0);
+
+
   const form = useForm({
     defaultValues: {
       name: "",
@@ -37,6 +44,58 @@ function FormAdmission() {
   });
 
   const navigate = useNavigate();
+
+  // Handle phone number input change
+  // const handlePhoneChange = (e) => {
+  //   const value = e.target.value
+  //   // Show send OTP button only when 10 digits are entered
+  //   setShowOtpField(value.length === 10);
+  // }
+
+  // Send OTP
+  // const sendOtp = async() => {
+  //   try {
+  //     const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/send-otp`, {
+  //       method: "POST",
+  //       body: JSON.stringify({ phone: form.getValues("phone") }),
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //     })
+  //     if (response.ok) {
+  //       setCountdown(60);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error sending OTP: ",error);
+  //   }
+  // };
+
+  // Verify OTP
+  // const verifyOtp = async() => {
+  //   try {
+  //     const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/verify-otp`, {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         phone: form.getValues("phone"),
+  //         otp
+  //       }),
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       }
+  //     })
+
+  //     const data = await response.json();
+  //     setIsVerified(data.verified)
+  //   } catch (error) {
+  //     console.error("Error verifying OTP: ",error);
+      
+  //   }
+  // };
+
+  // Countdown timer
+  // useEffect(() => {
+  //   countdown > 0 && setTimeout(() => setCountdown(countdown - 1), 1000);
+  // }, [countdown])
 
   const onSubmit = async (data) => {
     try {
@@ -145,11 +204,45 @@ function FormAdmission() {
                     required
                     {...field}
                     className=" text-gray-200"
+                    maxLength={10}
+                    minLength={10}
+                    // onChange={(e) => {
+                    //   field.onChange(e);
+                    //   handlePhoneChange(e);
+                    // }}
                   />
+                  {/* {
+                    showOtpField && (
+                      <Button
+                      type="button"
+                      onClick={sendOtp}
+                      disabled={countdown > 0}
+                      className="mt-2 bg-blue-500 hover:bg-blue-300 text-white"
+                      >
+                        {countdown > 0 ? `Resend OTP in ${countdown}s` : "Send OTP"}
+                      </Button>
+                    )
+                  } */}
                 </div>
               </FormItem>
             )}
           />
+         {/* OTP verification */}
+         {/* { countdown > 0 && (
+          <div className=" relative">
+            <OTPInput 
+            value={otp}
+            onChange={setOtp}
+            numInputs={6}
+            separator={<span>-</span>}
+            inputStyle="otp-input"
+            shouldAutoFocus
+            isInputNum
+            onBlur={verifyOtp}
+            />
+            { isVerified && <span className="absolute top-3 right-2 text-green-500">  ✓ </span>}
+          </div>
+         )} */}
           <FormField
             name="class"
             control={form.control}
