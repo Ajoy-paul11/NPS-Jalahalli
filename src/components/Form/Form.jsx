@@ -111,12 +111,12 @@ function FormAdmission() {
       const result = await response.json();
 
       if (result.success) {
-        
+
         // Push the form submission event to dataLayer
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          event: "form_submission",
-          formId: "admission_form",
+          'event': "form_submission",
+          'formId': "admission_form",
         });
         toast.success("Message sent Successfully");
         form.reset();
