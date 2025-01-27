@@ -6,8 +6,10 @@ function ThankYou() {
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      'event': 'pageview',
-      'page': '/thankyou'
+      'event': 'page_view',          
+      'page_path': '/thankyou', 
+      'page_location': window.location.href,     
+      'conversion_success': true 
     })
   }, [])
   const navigate = useNavigate();

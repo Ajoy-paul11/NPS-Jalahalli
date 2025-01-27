@@ -32,7 +32,6 @@ function FormAdmission() {
   // const [isVerified, setIsVerified] = useState(false);
   // const [countdown, setCountdown] = useState(0);
 
-
   const form = useForm({
     defaultValues: {
       name: "",
@@ -88,7 +87,7 @@ function FormAdmission() {
   //     setIsVerified(data.verified)
   //   } catch (error) {
   //     console.error("Error verifying OTP: ",error);
-      
+
   //   }
   // };
 
@@ -110,10 +109,18 @@ function FormAdmission() {
       });
 
       const result = await response.json();
-      
+
       if (result.success) {
+        
+        // Push the form submission event to dataLayer
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "form_submission",
+          formId: "admission_form",
+        });
         toast.success("Message sent Successfully");
         form.reset();
+
         navigate("/thankyou");
       } else {
         toast.error(result.message || "Failed to send message");
@@ -128,7 +135,8 @@ function FormAdmission() {
   return (
     <div className=" w-[380px] overflow-hidden space-y-8 bg-[rgba(255,255,255,0.2)] backdrop-blur-lg  rounded-lg">
       <h2 className=" text-2xl text-center font-bold text-white my-4">
-        Admission Form <br />for <span className=" text-blue">2025-26</span>
+        Admission Form <br />
+        for <span className=" text-blue">2025-26</span>
       </h2>
       <Form {...form}>
         <form
@@ -227,8 +235,8 @@ function FormAdmission() {
               </FormItem>
             )}
           />
-         {/* OTP verification */}
-         {/* { countdown > 0 && (
+          {/* OTP verification */}
+          {/* { countdown > 0 && (
           <div className=" relative">
             <OTPInput 
             value={otp}
@@ -311,7 +319,9 @@ function FormAdmission() {
           />
           <Button
             type="submit"
-            className={`bg-blue-500 text-gray-200 hover:bg-blue-400 duration-200 hover:text-gray-800 w-full mt-3 ${isSubmitting ? "cursor-not-allowed" : ""}`}
+            className={`bg-blue-500 text-gray-200 hover:bg-blue-400 duration-200 hover:text-gray-800 w-full mt-3 ${
+              isSubmitting ? "cursor-not-allowed" : ""
+            }`}
           >
             {isSubmitting ? "Sending" : "Send Message"}
           </Button>
