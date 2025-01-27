@@ -5,12 +5,16 @@ import verified from "../assets/verified.gif"
 function ThankYou() {
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
+    // window.dataLayer.push({
+    //   'event': 'page_view',          
+    //   'page_path': '/thankyou', 
+    //   'page_location': window.location.href,     
+    //   'conversion_success': true 
+    // })
     window.dataLayer.push({
-      'event': 'page_view',          
-      'page_path': '/thankyou', 
-      'page_location': window.location.href,     
-      'conversion_success': true 
-    })
+      'event': 'thankyou_page', // Custom event name
+      'page_path': '/thankyou'
+    });
   }, [])
   const navigate = useNavigate();
 
