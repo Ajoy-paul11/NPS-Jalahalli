@@ -23,6 +23,11 @@ function HeroSection() {
          </Marquee>
         </div>
       </div>
+      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
+        <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
+          Welcome to <br className=" hidden lg:block xl:hidden"/> <span className=" text-blue">NPS Jalahalli  </span> Institute
+        </h1>
+      </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
         <div className="  bg-white/10 order-1">
           <FormAdmission />

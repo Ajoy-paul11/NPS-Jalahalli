@@ -6,7 +6,7 @@ function School() {
       {/* order-2 lg:order-1 */}
       <div className=" px-4 ">
         <h1 className=" text-3xl lg:text-4xl text-blue mb-6 font-bold text-center">
-          Best CBSE School in Jalahalli
+          National Public School Jalahalli -Best CBSE School in North Bangalore
         </h1>
         <p className=" text-lg text-black my-2 indent-8">
           NPS, Jalahalli has a sprawling 8 acres campus with state-of-the-art
