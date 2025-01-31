@@ -12,6 +12,7 @@ function GradeSecondary() {
         <School />
         <hr className=" border-blue-100"/>
         <About />
+        <hr className=" border-blue-100"/>
         <Facilities />
         <Footer />
       </div>

@@ -16,7 +16,7 @@ function Facilities() {
             <h5 className=" text-center text-xl lg:text-2xl font-semibold text-blue mb-2 lg:mb-4">Understanding the easy to use process</h5>
             <div className=' h-1 bg-[#0d6efd] mx-auto w-[100px] my-6'></div>
         </div>
-        <div className=' grid grid-cols-3 gap-6'>
+        <div className=' grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
             <FacilityCard icon={sport} title={"Sports"} description={"A variety of outdoor and indoor sports are offered at NPS Jalahalli."}/>
             <FacilityCard icon={lab} title={"Fully equipped Labs"} description={"These are fully equipped to meet the curriculum requirements for practicals."}/>
             <FacilityCard icon={audio} title={"Audio Visual Room"} description={"At NPS Jalahalli the Audio room are spacious in order to provide."}/>
