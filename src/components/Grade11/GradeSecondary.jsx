@@ -3,6 +3,7 @@ import HeroGradeSection from './HeroGradeSection';
 import About from '../About';
 import Footer from '../Footer';
 import School from '../School';
+import Facilities from '../Facilities';
 
 function GradeSecondary() {
   return (
@@ -11,6 +12,7 @@ function GradeSecondary() {
         <School />
         <hr className=" border-blue-100"/>
         <About />
+        <Facilities />
         <Footer />
       </div>
   )

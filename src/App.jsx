@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import School from "./components/School";
+import Facilities from "./components/Facilities";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <School />
         <hr className=" border-blue-100"/>
         <About />
+        <Facilities />
         <Footer />
       </div>
     </>
