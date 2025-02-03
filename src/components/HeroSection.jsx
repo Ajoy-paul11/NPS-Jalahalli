@@ -5,8 +5,12 @@ import FormAdmission from "./Form/Form";
 import school from "../assets/jalahalli-school.avif";
 import Tagline from "./Tagline";
 import { Link } from "react-router-dom";
+import { HiOutlineBars3 } from "react-icons/hi2";
+import { RxCross1 } from "react-icons/rx";
 
 function MobileView() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div
       style={{
@@ -22,37 +26,53 @@ function MobileView() {
             className="h-[75px] lg:w-[300px] 2xl:w-[330px] rounded"
           />
         </div>
-        <div className=" max-w-2xl bg-blue-500 rounded-sm py-4 px-2">
+        <div className=" max-w-[95%] bg-blue-500 rounded-sm py-2 ml-[-45px]">
           <Marquee className=" text-white font-semibold text-xl">
             <Tagline />
             <Tagline />
           </Marquee>
         </div>
+        <div className=" p-1 cursor-pointer text-blue absolute top-[110px] right-[5px]">
+            { open ? <RxCross1 className=" w-8 h-8" onClick={() => setOpen(!open)}/> : <HiOutlineBars3 className=" w-8 h-8" onClick={() => setOpen(!open)}/>}
+        </div>
+        {open && ( 
+          <div className=" w-full h-screen bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
+          <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
+            <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
+              <li className=" cursor-pointer ">
+                <Link to={"/grade-11"}>Grade-11 & 12</Link>
+              </li>
+              <li className=" cursor-pointer group">
+                <Link>About Us</Link>
+                <div className=" hidden group-hover:block">
+                  <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-52 p-1 rounded-lg">
+                    <li className=" cursor-pointer p-1 text-base">Director Message</li>
+                    <li className=" cursor-pointer p-1 text-base">Principal Message</li>
+                  </ul>
+                </div>
+              </li>
+              <li className=" cursor-pointer">
+                <Link to={"/"}>Library</Link>
+              </li>
+              <li className=" cursor-pointer">
+                <Link to={"/"}>Student Activity</Link>
+              </li>
+              <li className=" cursor-pointer group">
+                <Link>Achievement</Link>
+                <div className=" hidden group-hover:block">
+                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
+                    <li className=" cursor-pointer p-1 text-base">Student</li>
+                    <li className=" cursor-pointer p-1 text-base">Teacher</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        ) }
+
       </div>
-      {/* <div className="bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
-      <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
-        <ul className=" flex gap-4 lg:justify-between xl:justify-evenly items-center">
-          <li className=" cursor-pointer">
-            <Link>Principal Message</Link>
-          </li>
-          <li className=" cursor-pointer">
-            <Link>Director Message</Link>
-          </li>
-          <li className=" cursor-pointer">
-            <Link>Library</Link>
-          </li>
-          <li className=" cursor-pointer">
-            <Link>Student Activity</Link>
-          </li>
-          <li className=" cursor-pointer">
-            <Link>Student Achievement</Link>
-          </li>
-          <li className=" cursor-pointer">
-            <Link>Teacher Achievement</Link>
-          </li>
-        </ul>
-      </nav>
-    </div> */}
+      
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
           Welcome to <br className=" hidden lg:block xl:hidden" />{" "}
@@ -92,21 +112,33 @@ function LargeView() {
         </div>
         <div className="">
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
-            <ul className=" flex gap-4 lg:justify-between xl:justify-evenly items-center">
-              <li className=" cursor-pointer">
-                <Link>Grade-11 & 12</Link>
+            <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
+              <li className=" cursor-pointer ">
+                <Link to={"/grade-11"}>Grade-11 & 12</Link>
+              </li>
+              <li className=" cursor-pointer group">
+                <Link >About Us</Link>
+                <div className=" hidden group-hover:block">
+                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
+                    <li className=" cursor-pointer p-1 text-base">Director Message</li>
+                    <li className=" cursor-pointer p-1 text-base">Principal Message</li>
+                  </ul>
+                </div>
               </li>
               <li className=" cursor-pointer">
-                <Link>About Us</Link>
+                <Link to={"/"}>Library</Link>
               </li>
               <li className=" cursor-pointer">
-                <Link>Library</Link>
+                <Link to={"/"}>Student Activity</Link>
               </li>
-              <li className=" cursor-pointer">
-                <Link>Student Activity</Link>
-              </li>
-              <li className=" cursor-pointer">
-                <Link>Achievement</Link>
+              <li className=" cursor-pointer group">
+                <Link to={"/"}>Achievement</Link>
+                <div className=" hidden group-hover:block">
+                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
+                    <li className=" cursor-pointer p-1 text-base">Student</li>
+                    <li className=" cursor-pointer p-1 text-base">Teacher</li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </nav>
