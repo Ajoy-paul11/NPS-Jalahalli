@@ -92,8 +92,7 @@ function MobileView() {
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
-          Academic { " " }
-          <span className=" text-blue"> Director's </span> Message
+          <span className=" text-blue">Principal's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
@@ -170,10 +169,9 @@ function LargeView() {
         </div>
       </div>
 
-      <div className=" md:absolute lg:top-[215px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[140px] xl:left-[170px] 2xl:left-[330px]">
+      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
-          Academic {" "}
-          <span className=" text-blue">Director's </span> Message
+          <span className=" text-blue">Principal's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
@@ -185,7 +183,7 @@ function LargeView() {
   );
 }
 
-function DirectorMsg() {
+function PrincipalMsg() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -212,14 +210,14 @@ function DirectorMsg() {
         </div>
         <div className=" w-full lg:w-2/3 px-4">
           <h3 className=" text-2xl xl:text-4xl font-bold text-blue mb-4 text-center xl:mb-8">
-            ACADEMIC DIRECTOR'S MESSAGE
+          PRINCIPAL'S MESSAGE
           </h3>
           <div className=" text-lg text-blue my-4">
             <h4 className=" text-2xl font-semibold text-black text-center">
-              Ms. Grace. C D,
+            Mrs. Renu Elizabeth Benny,
             </h4>
             <p className=" text-base xl:text-lg text-center indent-[-28px]">
-              Academic Director,
+            MSc. LLb. BEd. Principal,
             </p>
             <p className=" text-base xl:text-lg text-center indent-16">
               National Public School Jalahalli
@@ -227,35 +225,31 @@ function DirectorMsg() {
           </div>
           <div className=" text-sm xl:text-lg text-black my-2">
             <p>
-              "If we want butterflies in the future, we must care for the
-              caterpillars today."
-              <br />
-              For every student, the school is a Chrysalis.
+            “The foundation of education is to teach one to think intensively and to think critically. Intelligence plus character, that is the Goal of true education.”
             </p>
-            <p className=" my-3">
-              Children enter the school as small caterpillars, groping their way
-              through the corridors of school life.
+            <p className=" my-3 font-semibold">
+            - Martin Luther King
+            </p>
+            <p className=" my-3 font-semibold">
+            Dear Parents,
+            </p>
+            <p className=" mb-3">
+            Greetings from NPS Jalahalli! We are an institution that encourages children to bring out the best in themselves and which supports their all-round development through discovering the joy of learning, awakening their intellect in multi- dimensional ways and instilling values. We strongly believe that every child has a hidden potential and innate ability which can be unleased by providing a conducive learning environment. Our primary goal is to help students achieve their dreams and find success in pursuing life goals through integrating academics with sports, art and music to create a vibrant and dynamic learning environment.
+            </p>
+            <p className=" mb-3">
+            At NPS we follow a child centric curriculum which emphasise on conceptual understanding, collaborative learning and innovative activities to ensure creative and critical thinking, thus enabling the learners to think beyond the boundaries of the books. We believe in empowering our children in such a manner that they act as responsible representatives of a meaningful and value-based society by promoting tolerance, mutual respect and international mindedness. We mould our children to be open to thinking globally and be prepared for life anywhere in the world.
+            </p>
+            <p className=" mb-3">
+            Our well qualified and trained teaching and non-teaching staff are our strength. They provide a warm and nurturing environment and ensures a home away from home atmosphere that helps in bringing out the child’s best potential.al respect and international mindedness. We mould our children to be open to thinking globally and be prepared for life anywhere in the world.
+            </p>
+            <p className=" mb-3">
+            Remember parents, education is a shared commitment between dedicated teachers, motivated students and enthusiastic parents. We believe that the partnership between the school and the home is the foundation of a student’s fulfilment and success in their later life. We therefore seek the enduring and the binding support of all the parents in this phase of your child’s life.
             </p>
             <p>
-              Here they learn life skills, techniques of learning and art of
-              living. It is here, in the school, that children undergo changes.
-              In the chrysalis of life, children undergo metamorphosis. The
-              change that takes place in the overall personality of the child is
-              slow but sure. National Public School, Jalahalli will be the
-              architect of this change. We will build a Statesman, a Surgeon, an
-              Engineer, an Advocate, another Teacher, a Scientist, etc. We at
-              National Public School, Jalahalli know that if we have to have
-              butterflies in this world, we must give love and care for the
-              caterpillars who come to us and that will be our effort day in and
-              day out. The school, the Chrysalis will protect the children and
-              the teachers will be the catalysts, the driving force, behind this
-              change. And when our little, bejeweled butterflies, take to their
-              wings, with the inner strength to face all life’s challenges, we
-              know that these jewels are priceless for National Public School,
-              Jalahalli.
+            With a firm belief in laying a strong foundation where each student can begin their flight of excellence and soar to reach the zenith of success, we look forward to welcoming you to be a part of our vibrant learning community.
             </p>
-            <p className=" my-6">
-              My best wishes to the students of NPS Jalahalli and their parents.
+            <p className=" my-6 font-semibold">
+            “Reach Out, Reach High, Reach Beyond”
             </p>
           </div>
         </div>
@@ -265,4 +259,4 @@ function DirectorMsg() {
   );
 }
 
-export default DirectorMsg;
+export default PrincipalMsg;
