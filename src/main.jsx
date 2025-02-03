@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ThankYou from './components/ThankYou'
 import { ToastContainer } from 'react-toastify'
 import GradeSecondary from './components/Grade11/GradeSecondary'
+import DirectorMsg from './components/DirectorMsg'
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,11 @@ const router = createBrowserRouter([
   {
     path: "/grade-11",
     element: <GradeSecondary />,
+  },
+  {
+    path: "/director-message",
+    element: <DirectorMsg />,
   }
-  
 ])
 
 createRoot(document.getElementById('root')).render(
