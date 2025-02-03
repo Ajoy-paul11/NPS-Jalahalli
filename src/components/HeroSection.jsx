@@ -46,23 +46,23 @@ function MobileView() {
                 <Link>About Us</Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-52 p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">Director Message</li>
-                    <li className=" cursor-pointer p-1 text-base">Principal Message</li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/director-message"}>Director Message</Link></li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/principal-message"}>Principal Message</Link></li>
                   </ul>
                 </div>
               </li>
               <li className=" cursor-pointer">
-                <Link to={"/"}>Library</Link>
+                <Link to={"/library"}>Library</Link>
               </li>
               <li className=" cursor-pointer">
-                <Link to={"/"}>Student Activity</Link>
+                <Link to={"/student-activity"}>Student Activity</Link>
               </li>
               <li className=" cursor-pointer group">
                 <Link>Achievement</Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">Student</li>
-                    <li className=" cursor-pointer p-1 text-base">Teacher</li>
+                    <li className=" cursor-pointer p-1 text-base"> <Link to={"/student-achievement"}>Student</Link></li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/teacher-achievement"}>Teacher</Link></li>
                   </ul>
                 </div>
               </li>
@@ -120,23 +120,23 @@ function LargeView() {
                 <Link >About Us</Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">Director Message</li>
-                    <li className=" cursor-pointer p-1 text-base">Principal Message</li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/director-message"}>Director Message</Link></li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/principal-message"}>Principal Message</Link></li>
                   </ul>
                 </div>
               </li>
               <li className=" cursor-pointer">
-                <Link to={"/"}>Library</Link>
+                <Link to={"/library"}>Library</Link>
               </li>
               <li className=" cursor-pointer">
-                <Link to={"/"}>Student Activity</Link>
+                <Link to={"/student-activity"}>Student Activity</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link to={"/"}>Achievement</Link>
+                <Link>Achievement</Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">Student</li>
-                    <li className=" cursor-pointer p-1 text-base">Teacher</li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/student-achievement"}>Student</Link></li>
+                    <li className=" cursor-pointer p-1 text-base"><Link to={"/teacher-achievement"}>Teacher</Link></li>
                   </ul>
                 </div>
               </li>
