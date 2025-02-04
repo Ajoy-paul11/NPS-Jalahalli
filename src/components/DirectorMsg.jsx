@@ -212,16 +212,16 @@ function DirectorMsg() {
         </div>
         <div className=" w-full lg:w-2/3 px-4">
           <h3 className=" text-2xl xl:text-4xl font-bold text-blue mb-4 text-center xl:mb-8">
-            ACADEMIC DIRECTOR'S MESSAGE
+            DIRECTOR'S MESSAGE
           </h3>
-          <div className=" text-lg text-blue my-4">
-            <h4 className=" text-2xl font-semibold text-black text-center">
+          <div className=" text-lg text-blue my-4 px-4 md:px-12 lg:px-18 2xl:px-24">
+            <h4 className=" text-2xl font-semibold text-black md:text-start md:text-[25px]">
               Ms. Grace. C D,
             </h4>
-            <p className=" text-base xl:text-lg text-center indent-[-28px]">
+            <p className=" text-base xl:text-lg ">
               Academic Director,
             </p>
-            <p className=" text-base xl:text-lg text-center indent-16">
+            <p className=" text-base xl:text-lg">
               National Public School Jalahalli
             </p>
           </div>

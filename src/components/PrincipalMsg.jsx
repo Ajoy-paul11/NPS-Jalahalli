@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
 import Footer from "./Footer";
-import director from "../assets/nps-director.jpg";
+import principal from "../assets/nps-principal.jpg";
+
 
 function MobileView() {
   const [open, setOpen] = useState(false);
@@ -169,7 +170,7 @@ function LargeView() {
         </div>
       </div>
 
-      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
+      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[220px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
           <span className=" text-blue">Principal's </span> Message
         </h1>
@@ -203,7 +204,7 @@ function PrincipalMsg() {
       <div className=" container mx-auto lg:p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-8 bg-[#f4f5ff]">
         <div className=" w-full lg:w-1/3 xl:mx-8">
           <img
-            src={director}
+            src={principal}
             alt="chairman-image"
             className=" rounded-2xl mx-auto mt-8 lg:mt-0"
           />
@@ -212,14 +213,14 @@ function PrincipalMsg() {
           <h3 className=" text-2xl xl:text-4xl font-bold text-blue mb-4 text-center xl:mb-8">
           PRINCIPAL'S MESSAGE
           </h3>
-          <div className=" text-lg text-blue my-4">
-            <h4 className=" text-2xl font-semibold text-black text-center">
+          <div className=" text-lg text-blue my-4 px-4 md:px-12 lg:px-18 2xl:px-24">
+            <h4 className=" text-2xl font-semibold text-black md:text-start md:text-[25px]">
             Mrs. Renu Elizabeth Benny,
             </h4>
-            <p className=" text-base xl:text-lg text-center indent-[-28px]">
+            <p className=" text-base xl:text-lg">
             MSc. LLb. BEd. Principal,
             </p>
-            <p className=" text-base xl:text-lg text-center indent-16">
+            <p className=" text-base xl:text-lg">
               National Public School Jalahalli
             </p>
           </div>
