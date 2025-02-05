@@ -25,7 +25,26 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "react-toastify";
 // import OTPInput from "react-otp-input";
 
+
 function FormAdmission() {
+
+  function gtag_report_conversion() {
+    return new Promise((resolve) => {
+      const callback = () => {
+        resolve();
+      };
+      
+      if (typeof window.gtag !== 'undefined') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-833858299/E6YqCM7-iJIaEPvVzo0D',
+          'event_callback': callback
+        });
+      } else {
+        resolve();
+      }
+    });
+  }
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   // const [showOtpField, setShowOtpField] = useState(false);
   // const [otp, setOtp] = useState("");
@@ -118,7 +137,11 @@ function FormAdmission() {
           'event': "form_submission",
           'formId': "admission_form",
         });
+        
         toast.success("Message sent Successfully");
+
+        await gtag_report_conversion();
+
         form.reset();
 
         navigate("/thankyou");
