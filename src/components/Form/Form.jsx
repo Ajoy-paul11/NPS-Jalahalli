@@ -133,7 +133,7 @@ function FormAdmission() {
   };
 
   return (
-    <div className=" w-[380px] overflow-hidden space-y-8 bg-[rgba(255,255,255,0.2)] backdrop-blur-lg  rounded-lg">
+    <div className=" w-[380px] lg:w-[330px] xl:w-[380px] overflow-hidden space-y-8 bg-[rgba(255,255,255,0.2)] backdrop-blur-lg  rounded-lg">
       <h2 className=" text-2xl text-center font-bold text-white my-4">
         Admission Form <br />
         for <span className=" text-blue">2025-26</span>

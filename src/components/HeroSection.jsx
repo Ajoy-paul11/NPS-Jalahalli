@@ -96,7 +96,7 @@ function LargeView() {
       }}
       className=" bg-cover bg-center bg-no-repeat xl:h-screen"
     >
-      <div className=" w-full bg-blue-500 rounded-sm py-4 px-2">
+      <div className=" w-full bg-blue-500 rounded-sm py-2 px-2">
         <Marquee className=" text-white font-semibold text-xl">
           <Tagline />
           <Tagline />
