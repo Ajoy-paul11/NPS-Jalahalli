@@ -10,7 +10,6 @@ import { RxCross1 } from "react-icons/rx";
 import Footer from "./Footer";
 import principal from "../assets/nps-principal.jpg";
 
-
 function MobileView() {
   const [open, setOpen] = useState(false);
 
@@ -49,9 +48,6 @@ function MobileView() {
           <div className=" w-full h-screen bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
-                <li className=" cursor-pointer ">
-                  <Link to={"/grade-11"}>Grade-11 & 12</Link>
-                </li>
                 <li className=" cursor-pointer group">
                   <Link>About Us</Link>
                   <div className=" hidden group-hover:block">
@@ -70,6 +66,9 @@ function MobileView() {
                 </li>
                 <li className=" cursor-pointer">
                   <Link to={"/student-activity"}>Student Activity</Link>
+                </li>
+                <li className=" cursor-pointer ">
+                  <Link to={"/grade-11"}>Grade-11 & 12</Link>
                 </li>
                 <li className=" cursor-pointer group">
                   <Link>Achievement</Link>
@@ -93,6 +92,7 @@ function MobileView() {
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
+          Academic
           <span className=" text-blue">Principal's </span> Message
         </h1>
       </div>
@@ -130,9 +130,6 @@ function LargeView() {
         <div className="">
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
-              <li className=" cursor-pointer ">
-                <Link to={"/grade-11"}>Grade-11 & 12</Link>
-              </li>
               <li className=" cursor-pointer group">
                 <Link>About Us</Link>
                 <div className=" hidden group-hover:block">
@@ -151,6 +148,9 @@ function LargeView() {
               </li>
               <li className=" cursor-pointer">
                 <Link to={"/student-activity"}>Student Activity</Link>
+              </li>
+              <li className=" cursor-pointer ">
+                <Link to={"/grade-11"}>Grade-11 & 12</Link>
               </li>
               <li className=" cursor-pointer group">
                 <Link>Achievement</Link>
@@ -172,6 +172,7 @@ function LargeView() {
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[220px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
+          Academic {" "}
           <span className=" text-blue">Principal's </span> Message
         </h1>
       </div>
@@ -211,46 +212,72 @@ function PrincipalMsg() {
         </div>
         <div className=" w-full lg:w-2/3 px-4">
           <h3 className=" text-2xl xl:text-4xl font-bold text-blue mb-4 text-center xl:mb-8">
-          PRINCIPAL'S MESSAGE
+            PRINCIPAL'S MESSAGE
           </h3>
           <div className=" text-lg text-blue my-4 px-4 md:px-12 lg:px-18 2xl:px-24">
             <h4 className=" text-2xl font-semibold text-black md:text-start md:text-[25px]">
-            Mrs. Renu Elizabeth Benny,
+              Mrs. Renu Elizabeth Benny,
             </h4>
-            <p className=" text-base xl:text-lg">
-            MSc. LLb. BEd. Principal,
-            </p>
+            <p className=" text-base xl:text-lg">MSc. LLb. BEd. Principal,</p>
             <p className=" text-base xl:text-lg">
               National Public School Jalahalli
             </p>
           </div>
           <div className=" text-sm xl:text-lg text-black my-2">
             <p>
-            “The foundation of education is to teach one to think intensively and to think critically. Intelligence plus character, that is the Goal of true education.”
+              “The foundation of education is to teach one to think intensively
+              and to think critically. Intelligence plus character, that is the
+              Goal of true education.”
             </p>
-            <p className=" my-3 font-semibold">
-            - Martin Luther King
-            </p>
-            <p className=" my-3 font-semibold">
-            Dear Parents,
+            <p className=" my-3 font-semibold">- Martin Luther King</p>
+            <p className=" my-3 font-semibold">Dear Parents,</p>
+            <p className=" mb-3">
+              Greetings from NPS Jalahalli! We are an institution that
+              encourages children to bring out the best in themselves and which
+              supports their all-round development through discovering the joy
+              of learning, awakening their intellect in multi- dimensional ways
+              and instilling values. We strongly believe that every child has a
+              hidden potential and innate ability which can be unleased by
+              providing a conducive learning environment. Our primary goal is to
+              help students achieve their dreams and find success in pursuing
+              life goals through integrating academics with sports, art and
+              music to create a vibrant and dynamic learning environment.
             </p>
             <p className=" mb-3">
-            Greetings from NPS Jalahalli! We are an institution that encourages children to bring out the best in themselves and which supports their all-round development through discovering the joy of learning, awakening their intellect in multi- dimensional ways and instilling values. We strongly believe that every child has a hidden potential and innate ability which can be unleased by providing a conducive learning environment. Our primary goal is to help students achieve their dreams and find success in pursuing life goals through integrating academics with sports, art and music to create a vibrant and dynamic learning environment.
+              At NPS we follow a child centric curriculum which emphasise on
+              conceptual understanding, collaborative learning and innovative
+              activities to ensure creative and critical thinking, thus enabling
+              the learners to think beyond the boundaries of the books. We
+              believe in empowering our children in such a manner that they act
+              as responsible representatives of a meaningful and value-based
+              society by promoting tolerance, mutual respect and international
+              mindedness. We mould our children to be open to thinking globally
+              and be prepared for life anywhere in the world.
             </p>
             <p className=" mb-3">
-            At NPS we follow a child centric curriculum which emphasise on conceptual understanding, collaborative learning and innovative activities to ensure creative and critical thinking, thus enabling the learners to think beyond the boundaries of the books. We believe in empowering our children in such a manner that they act as responsible representatives of a meaningful and value-based society by promoting tolerance, mutual respect and international mindedness. We mould our children to be open to thinking globally and be prepared for life anywhere in the world.
+              Our well qualified and trained teaching and non-teaching staff are
+              our strength. They provide a warm and nurturing environment and
+              ensures a home away from home atmosphere that helps in bringing
+              out the child’s best potential.al respect and international
+              mindedness. We mould our children to be open to thinking globally
+              and be prepared for life anywhere in the world.
             </p>
             <p className=" mb-3">
-            Our well qualified and trained teaching and non-teaching staff are our strength. They provide a warm and nurturing environment and ensures a home away from home atmosphere that helps in bringing out the child’s best potential.al respect and international mindedness. We mould our children to be open to thinking globally and be prepared for life anywhere in the world.
-            </p>
-            <p className=" mb-3">
-            Remember parents, education is a shared commitment between dedicated teachers, motivated students and enthusiastic parents. We believe that the partnership between the school and the home is the foundation of a student’s fulfilment and success in their later life. We therefore seek the enduring and the binding support of all the parents in this phase of your child’s life.
+              Remember parents, education is a shared commitment between
+              dedicated teachers, motivated students and enthusiastic parents.
+              We believe that the partnership between the school and the home is
+              the foundation of a student’s fulfilment and success in their
+              later life. We therefore seek the enduring and the binding support
+              of all the parents in this phase of your child’s life.
             </p>
             <p>
-            With a firm belief in laying a strong foundation where each student can begin their flight of excellence and soar to reach the zenith of success, we look forward to welcoming you to be a part of our vibrant learning community.
+              With a firm belief in laying a strong foundation where each
+              student can begin their flight of excellence and soar to reach the
+              zenith of success, we look forward to welcoming you to be a part
+              of our vibrant learning community.
             </p>
             <p className=" my-6 font-semibold">
-            “Reach Out, Reach High, Reach Beyond”
+              “Reach Out, Reach High, Reach Beyond”
             </p>
           </div>
         </div>

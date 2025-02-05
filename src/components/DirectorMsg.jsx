@@ -48,9 +48,6 @@ function MobileView() {
           <div className=" w-full h-screen bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
-                <li className=" cursor-pointer ">
-                  <Link to={"/grade-11"}>Grade-11 & 12</Link>
-                </li>
                 <li className=" cursor-pointer group">
                   <Link>About Us</Link>
                   <div className=" hidden group-hover:block">
@@ -69,6 +66,9 @@ function MobileView() {
                 </li>
                 <li className=" cursor-pointer">
                   <Link to={"/student-activity"}>Student Activity</Link>
+                </li>
+                <li className=" cursor-pointer ">
+                  <Link to={"/grade-11"}>Grade-11 & 12</Link>
                 </li>
                 <li className=" cursor-pointer group">
                   <Link>Achievement</Link>
@@ -92,8 +92,7 @@ function MobileView() {
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
-          Academic { " " }
-          <span className=" text-blue"> Director's </span> Message
+          Academic <span className=" text-blue"> Director's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
@@ -130,9 +129,6 @@ function LargeView() {
         <div className="">
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
-              <li className=" cursor-pointer ">
-                <Link to={"/grade-11"}>Grade-11 & 12</Link>
-              </li>
               <li className=" cursor-pointer group">
                 <Link>About Us</Link>
                 <div className=" hidden group-hover:block">
@@ -151,6 +147,9 @@ function LargeView() {
               </li>
               <li className=" cursor-pointer">
                 <Link to={"/student-activity"}>Student Activity</Link>
+              </li>
+              <li className=" cursor-pointer ">
+                <Link to={"/grade-11"}>Grade-11 & 12</Link>
               </li>
               <li className=" cursor-pointer group">
                 <Link>Achievement</Link>
@@ -172,8 +171,7 @@ function LargeView() {
 
       <div className=" md:absolute lg:top-[215px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[140px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
-          Academic {" "}
-          <span className=" text-blue">Director's </span> Message
+          Academic <span className=" text-blue">Director's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
@@ -218,9 +216,7 @@ function DirectorMsg() {
             <h4 className=" text-2xl font-semibold text-black md:text-start md:text-[25px]">
               Ms. Grace. C D,
             </h4>
-            <p className=" text-base xl:text-lg ">
-              Academic Director,
-            </p>
+            <p className=" text-base xl:text-lg ">Academic Director,</p>
             <p className=" text-base xl:text-lg">
               National Public School Jalahalli
             </p>
