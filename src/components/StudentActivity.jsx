@@ -111,19 +111,52 @@ function MobileView() {
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
             <div className=" ">
-              <img src={activity1} alt="activity-img" />
+              <img src={activity1} alt="activity-img" className=" rounded-lg"/>
             </div>
             <div className="">
-              <img src={activity2} alt="activity-img" />
+              <img src={activity2} alt="activity-img" className=" rounded-lg"/>
             </div>
             <div className=" ">
-              <img src={activity3} alt="activity-img" />
+              <img src={activity3} alt="activity-img" className=" rounded-lg"/>
             </div>
             <div className=" ">
-              <img src={activity4} alt="activity-img" />
+              <img src={activity4} alt="activity-img" className=" rounded-lg"/>
             </div>
             <div className="">
-              <img src={activity5} alt="activity-img" />
+              <img src={activity5} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity6} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity7} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity8} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity9} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity10} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity11} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={activity12} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={yoga3} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={yoga4} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={yoga5} alt="activity-img" className=" rounded-lg"/>
+            </div>
+            <div className="">
+              <img src={yoga6} alt="activity-img" className=" rounded-lg"/>
             </div>
           </div>
         </div>
@@ -155,7 +188,7 @@ function LargeView() {
               <li className=" cursor-pointer group">
                 <Link>About Us</Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
+                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
@@ -177,7 +210,7 @@ function LargeView() {
               <li className=" cursor-pointer group">
                 <Link>Achievement</Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
+                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/student-achievement"}>Student</Link>
                     </li>
@@ -193,113 +226,113 @@ function LargeView() {
       </div>
       <div className="flex-1 bg-[#5f9ce0] flex relative">
         <div className=" w-2/3 p-4 overflow-y-auto">
-          <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6">
-            <div className=" w-[400px] h-[300px] 2xl:w-[500px] 2xl:h-[375px] ">
+          <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">
+            <div className=" w-[400px] h-[300px] lg:w-[300px] lg:h-[225px] xl:w-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[375px] ">
               <img
                 src={activity1}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[300px] 2xl:w-[500px] 2xl:h-[375px]">
+            <div className=" w-[400px] h-[300px] lg:w-[300px] lg:h-[225px] xl:w-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[375px]">
               <img
                 src={activity2}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity3}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity4}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity5}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity6}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity7}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity8}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity9}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity10}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity11}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={activity12}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={yoga3}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={yoga4}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={yoga5}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
               />
             </div>
-            <div className=" w-[400px] h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
+            <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
                 src={yoga6}
                 alt="activity-img"
@@ -307,7 +340,7 @@ function LargeView() {
               />
             </div>
           </div>
-          <div className=" w-1/3 fixed right-0 top-[130px] h-[calc(100vh-130px)] bg-[#5f9ce0] p-8 lg:pl-0 xl:pl-8">
+          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] bg-[#5f9ce0] p-8 lg:pl-0 xl:pl-8">
             <div className=" ">
               <FormAdmission />
             </div>
@@ -333,9 +366,11 @@ function StudentActivity() {
   }, []);
 
   return (
-    <>
-      <div>{windowWidth < 1024 ? <MobileView /> : <LargeView />}</div>
-    </>
+    <div>
+      <div>
+        {windowWidth < 1024 ? <MobileView /> : <LargeView />}
+      </div>
+    </div>
   );
 }
 
