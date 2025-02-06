@@ -3,20 +3,42 @@ import { useNavigate } from "react-router-dom";
 import verified from "../assets/verified.gif"
 
 function ThankYou() {
+
   useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    // window.dataLayer.push({
-    //   'event': 'page_view',          
-    //   'page_path': '/thankyou', 
-    //   'page_location': window.location.href,     
-    //   'conversion_success': true 
-    // })
-    window.dataLayer.push({
-      'event': 'thankyou_page', // Custom event name
-      'page_path': '/thankyou'
-    });
+    console.log("ThankYou component mounted"); 
+
+    // Check if GTM has already been reported in this session
+    const hasReported = sessionStorage.getItem('gtmReported')
+
+    if (!hasReported) {
+
+      // Set dataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'thankyou_page',
+        'page_path': '/thankyou'
+      });
+
+      // Set the flag in sessionStorage
+      sessionStorage.setItem('gtmReported', 'true');
+
+      // Instead of using setTimeout, use a flag in sessionStorage
+      if (!sessionStorage.getItem('reloadTriggered')) {
+
+        sessionStorage.setItem('reloadTriggered', 'true');
+
+        // Small delay to ensure logs are visible
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
+      }
+    } else {
+      console.log("GTM already reported in this session"); // Debug log for skipped execution
+    }
   }, [])
+
   const navigate = useNavigate();
+
 
   return (
     <div className=" flex flex-col justify-center gap-4 items-center h-screen text-blue-500 bg-[#f4f5ff]">

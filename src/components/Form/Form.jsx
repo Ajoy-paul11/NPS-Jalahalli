@@ -192,7 +192,7 @@ function FormAdmission() {
                     placeholder="Student Name..."
                     required
                     {...field}
-                    className=" placeholder:text-white"
+                    className=" placeholder:text-white text-white"
                   />
                 </div>
               </FormItem>
@@ -213,7 +213,7 @@ function FormAdmission() {
                     placeholder="Email Address..."
                     required
                     {...field}
-                    className=" placeholder:text-white"
+                    className=" placeholder:text-white text-white"
                   />
                 </div>
               </FormItem>
@@ -234,7 +234,7 @@ function FormAdmission() {
                     placeholder="Phone Number..."
                     required
                     {...field}
-                    className=" placeholder:text-white"
+                    className=" placeholder:text-white text-white"
                     maxLength={10}
                     minLength={10}
                     // onChange={(e) => {

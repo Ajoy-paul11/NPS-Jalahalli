@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className=" p-8 mt-6 flex flex-col lg:flex-row justify-evenly items-center lg:items-end  gap-8 bg-blue-100">
+    <footer className=" !w-full p-8 mt-6 flex flex-col lg:flex-row justify-evenly items-center lg:items-end  gap-8 bg-blue-100">
       <div className=" max-w-lg text-lg">
        <span className=" text-blue">&copy; Copyrights </span> {new Date().getFullYear()}{" "}
         <span>National Public School, Jalahalli. <br className=" hidden lg:block"/> All Rights Reserved.</span>
