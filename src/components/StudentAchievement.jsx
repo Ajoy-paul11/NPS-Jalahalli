@@ -20,6 +20,8 @@ import achievement11 from "../assets/student-achievement/student-achievement11.j
 import achievement12 from "../assets/student-achievement/student-achievement12.jpeg";
 import achievement13 from "../assets/student-achievement/student-achievement13.png";
 import achievement14 from "../assets/student-achievement/student-achievement14.png";
+import { IoIosArrowDown } from "react-icons/io";
+
 
 
 
@@ -61,7 +63,7 @@ function MobileView() {
                     <li className=" cursor-pointer group">
                       <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                       <div className=" hidden group-hover:block">
-                        <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[375px] p-1 rounded-lg">
+                        <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[275px] p-1 rounded-lg">
                           <li className=" cursor-pointer p-1 text-base">
                             <Link to={"/director-message"}>Director Message</Link>
                           </li>

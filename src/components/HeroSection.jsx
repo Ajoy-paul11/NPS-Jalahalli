@@ -7,6 +7,7 @@ import Tagline from "./Tagline";
 import { Link } from "react-router-dom";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
+import { IoIosArrowDown } from "react-icons/io";
 
 function MobileView() {
   const [open, setOpen] = useState(false);
@@ -47,9 +48,9 @@ function MobileView() {
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                 <li className=" cursor-pointer group">
-                  <Link>About Us</Link>
+                  <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-52 p-1 rounded-lg">
+                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-28 p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
                         <Link to={"/director-message"}>Director Message</Link>
                       </li>
@@ -69,7 +70,7 @@ function MobileView() {
                   <Link to={"/grade-11"}>Grade-11 & 12</Link>
                 </li>
                 <li className=" cursor-pointer group">
-                  <Link>Achievement</Link>
+                  <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
@@ -129,7 +130,7 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us</Link>
+                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -151,7 +152,7 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11 & 12</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement</Link>
+                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -168,7 +169,7 @@ function LargeView() {
         </div>
       </div>
 
-      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
+      <div className=" md:absolute lg:top-[170px]  2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
           Welcome to <br className=" hidden lg:block xl:hidden" />{" "}
           <span className=" text-blue">NPS Jalahalli </span> Institute

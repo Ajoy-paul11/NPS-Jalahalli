@@ -9,6 +9,7 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
 import Footer from "./Footer";
 import director from "../assets/nps-director.jpg";
+import { IoIosArrowDown } from "react-icons/io";
 
 function MobileView() {
   const [open, setOpen] = useState(false);
@@ -49,9 +50,9 @@ function MobileView() {
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                 <li className=" cursor-pointer group">
-                  <Link>About Us</Link>
+                  <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-52 p-1 rounded-lg">
+                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-28 p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
                         <Link to={"/director-message"}>Director Message</Link>
                       </li>
@@ -71,7 +72,7 @@ function MobileView() {
                   <Link to={"/grade-11"}>Grade-11 & 12</Link>
                 </li>
                 <li className=" cursor-pointer group">
-                  <Link>Achievement</Link>
+                  <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
@@ -130,7 +131,7 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us</Link>
+                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -152,7 +153,7 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11 & 12</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement</Link>
+                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -169,7 +170,7 @@ function LargeView() {
         </div>
       </div>
 
-      <div className=" md:absolute lg:top-[215px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[140px] xl:left-[170px] 2xl:left-[330px]">
+      <div className=" md:absolute lg:top-[215px] xl:top-[170px] 2xl:top-[250px] md:left-[120px] lg:left-[140px] xl:left-[215px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
           Academic <span className=" text-blue">Director's </span> Message
         </h1>
@@ -212,7 +213,7 @@ function DirectorMsg() {
           <h3 className=" text-2xl xl:text-4xl font-bold text-blue mb-4 text-center xl:mb-8">
             DIRECTOR'S MESSAGE
           </h3>
-          <div className=" text-lg text-blue my-4 px-4 md:px-12 lg:px-18 2xl:px-24">
+          <div className=" text-lg text-blue my-4 px-4 md:px-4 lg:px-0">
             <h4 className=" text-2xl font-semibold text-black md:text-start md:text-[25px]">
               Ms. Grace. C D,
             </h4>
@@ -221,7 +222,7 @@ function DirectorMsg() {
               National Public School Jalahalli
             </p>
           </div>
-          <div className=" text-sm xl:text-lg text-black my-2">
+          <div className=" text-sm xl:text-lg text-black my-2 md:px-4 lg:px-0">
             <p>
               "If we want butterflies in the future, we must care for the
               caterpillars today."

@@ -9,6 +9,7 @@ import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
 import Footer from "./Footer";
 import principal from "../assets/nps-principal.jpg";
+import { IoIosArrowDown } from "react-icons/io";
 
 function MobileView() {
   const [open, setOpen] = useState(false);
@@ -49,9 +50,9 @@ function MobileView() {
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                 <li className=" cursor-pointer group">
-                  <Link>About Us</Link>
+                  <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-52 p-1 rounded-lg">
+                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-28 p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
                         <Link to={"/director-message"}>Director Message</Link>
                       </li>
@@ -71,7 +72,7 @@ function MobileView() {
                   <Link to={"/grade-11"}>Grade-11 & 12</Link>
                 </li>
                 <li className=" cursor-pointer group">
-                  <Link>Achievement</Link>
+                  <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
@@ -131,7 +132,7 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us</Link>
+                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -153,7 +154,7 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11 & 12</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement</Link>
+                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -170,10 +171,9 @@ function LargeView() {
         </div>
       </div>
 
-      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[220px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
+      <div className=" md:absolute lg:top-[170px] xl:top-[170px] 2xl:top-[250px] md:left-[220px] lg:left-[190px] xl:left-[215px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
-          Academic {" "}
-          <span className=" text-blue">Principal's </span> Message
+          Academic <span className=" text-blue">Principal's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
@@ -214,7 +214,7 @@ function PrincipalMsg() {
           <h3 className=" text-2xl xl:text-4xl font-bold text-blue mb-4 text-center xl:mb-8">
             PRINCIPAL'S MESSAGE
           </h3>
-          <div className=" text-lg text-blue my-4 px-4 md:px-12 lg:px-18 2xl:px-24">
+          <div className=" text-lg text-blue my-4 px-4 md:px-4 lg:px-0 ">
             <h4 className=" text-2xl font-semibold text-black md:text-start md:text-[25px]">
               Mrs. Renu Elizabeth Benny,
             </h4>
@@ -223,7 +223,7 @@ function PrincipalMsg() {
               National Public School Jalahalli
             </p>
           </div>
-          <div className=" text-sm xl:text-lg text-black my-2">
+          <div className=" text-sm xl:text-lg text-black my-2 md:px-4 lg:px-0">
             <p>
               “The foundation of education is to teach one to think intensively
               and to think critically. Intelligence plus character, that is the
@@ -232,49 +232,19 @@ function PrincipalMsg() {
             <p className=" my-3 font-semibold">- Martin Luther King</p>
             <p className=" my-3 font-semibold">Dear Parents,</p>
             <p className=" mb-3">
-              Greetings from NPS Jalahalli! We are an institution that
-              encourages children to bring out the best in themselves and which
-              supports their all-round development through discovering the joy
-              of learning, awakening their intellect in multi- dimensional ways
-              and instilling values. We strongly believe that every child has a
-              hidden potential and innate ability which can be unleased by
-              providing a conducive learning environment. Our primary goal is to
-              help students achieve their dreams and find success in pursuing
-              life goals through integrating academics with sports, art and
-              music to create a vibrant and dynamic learning environment.
+              Greetings from NPS Jalahalli! We foster children's potential through joyful learning that combines academics, sports, arts, and music, creating an environment where every student flourishes.
             </p>
             <p className=" mb-3">
-              At NPS we follow a child centric curriculum which emphasise on
-              conceptual understanding, collaborative learning and innovative
-              activities to ensure creative and critical thinking, thus enabling
-              the learners to think beyond the boundaries of the books. We
-              believe in empowering our children in such a manner that they act
-              as responsible representatives of a meaningful and value-based
-              society by promoting tolerance, mutual respect and international
-              mindedness. We mould our children to be open to thinking globally
-              and be prepared for life anywhere in the world.
+            Our innovative curriculum emphasizes critical thinking and creativity beyond textbooks, developing globally-minded students who respect diversity and embrace responsibility.
             </p>
             <p className=" mb-3">
-              Our well qualified and trained teaching and non-teaching staff are
-              our strength. They provide a warm and nurturing environment and
-              ensures a home away from home atmosphere that helps in bringing
-              out the child’s best potential.al respect and international
-              mindedness. We mould our children to be open to thinking globally
-              and be prepared for life anywhere in the world.
+            Our expert teachers create a nurturing, home-like atmosphere where every child's unique talents are discovered and developed to their fullest potential.
             </p>
             <p className=" mb-3">
-              Remember parents, education is a shared commitment between
-              dedicated teachers, motivated students and enthusiastic parents.
-              We believe that the partnership between the school and the home is
-              the foundation of a student’s fulfilment and success in their
-              later life. We therefore seek the enduring and the binding support
-              of all the parents in this phase of your child’s life.
+            We believe in strong partnerships between teachers, students, and parents, working together to guide children toward lasting success.
             </p>
             <p>
-              With a firm belief in laying a strong foundation where each
-              student can begin their flight of excellence and soar to reach the
-              zenith of success, we look forward to welcoming you to be a part
-              of our vibrant learning community.
+            Join our vibrant community at NPS Jalahalli, where we provide the foundation for your child to achieve excellence and reach new heights.
             </p>
             <p className=" my-6 font-semibold">
               “Reach Out, Reach High, Reach Beyond”

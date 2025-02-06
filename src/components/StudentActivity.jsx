@@ -23,6 +23,8 @@ import yoga3 from "../assets/activity/yoga3.jpg";
 import yoga4 from "../assets/activity/yoga4.jpg";
 import yoga5 from "../assets/activity/yoga5.jpg";
 import yoga6 from "../assets/activity/yoga6.jpg";
+import { IoIosArrowDown } from "react-icons/io";
+
 
 function MobileView() {
   const [open, setOpen] = useState(false);
@@ -59,9 +61,9 @@ function MobileView() {
               <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
                 <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                   <li className=" cursor-pointer group">
-                    <Link>About Us</Link>
+                    <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                     <div className=" hidden group-hover:block">
-                      <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[375px] p-1 rounded-lg">
+                      <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[275px] p-1 rounded-lg">
                         <li className=" cursor-pointer p-1 text-base">
                           <Link to={"/director-message"}>Director Message</Link>
                         </li>
@@ -83,7 +85,7 @@ function MobileView() {
                     <Link to={"/grade-11"}>Grade-11 & 12</Link>
                   </li>
                   <li className=" cursor-pointer group">
-                    <Link>Achievement</Link>
+                    <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                     <div className=" hidden group-hover:block">
                       <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[680px] p-1 rounded-lg">
                         <li className=" cursor-pointer p-1 text-base">
@@ -184,7 +186,7 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us</Link>
+                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -206,7 +208,7 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11 & 12</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement</Link>
+                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
