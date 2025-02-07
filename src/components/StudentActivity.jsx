@@ -24,6 +24,7 @@ import yoga4 from "../assets/activity/yoga4.jpg";
 import yoga5 from "../assets/activity/yoga5.jpg";
 import yoga6 from "../assets/activity/yoga6.jpg";
 import { IoIosArrowDown } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 
 
 function MobileView() {
@@ -351,7 +352,23 @@ function LargeView() {
   );
 }
 
+function ModalForm({setOpen}) {
+  return (
+    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-[#5f9ce0]">
+      <div className=" relative  mx-auto">
+        <div className=" relative rounded-lg shadow-xl">
+          <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
+            <RxCross2 className=" text-white h-6 w-6 hover:text-black duration-200" onClick={() => setOpen(false)}/>
+          </div>
+          <FormAdmission />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function StudentActivity() {
+  const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -365,8 +382,18 @@ function StudentActivity() {
     };
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true)
+    }, 10000)
+
+    return () => clearTimeout(timer)
+
+  }, [])
+
   return (
     <div>
+      { open ? <ModalForm setOpen={setOpen}/> : "" }
       <div>
         {windowWidth < 1024 ? <MobileView /> : <LargeView />}
       </div>

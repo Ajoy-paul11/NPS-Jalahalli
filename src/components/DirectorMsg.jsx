@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import director from "../assets/nps-director.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 
+
 function MobileView() {
   const [open, setOpen] = useState(false);
 
@@ -50,7 +51,9 @@ function MobileView() {
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                 <li className=" cursor-pointer group">
-                  <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                  <Link>
+                    About Us <IoIosArrowDown className=" inline-block" />
+                  </Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-28 p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
@@ -72,7 +75,9 @@ function MobileView() {
                   <Link to={"/grade-11"}>Grade-11</Link>
                 </li>
                 <li className=" cursor-pointer group">
-                  <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                  <Link>
+                    Achievement <IoIosArrowDown className=" inline-block" />
+                  </Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
@@ -131,7 +136,9 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                <Link>
+                  About Us <IoIosArrowDown className=" inline-block" />
+                </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -153,7 +160,9 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                <Link>
+                  Achievement <IoIosArrowDown className=" inline-block" />
+                </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -234,7 +243,17 @@ function DirectorMsg() {
               through the corridors of school life.
             </p>
             <p>
-              At National Public School, Jalahalli, students learn life skills, critical thinking, and the art of living. Like caterpillars in a chrysalis, they undergo gradual transformation, nurtured by the school’s protective environment and dedicated teachers who act as catalysts for growth. Our mission is to shape future leaders—surgeons, engineers, scientists, and more—by fostering resilience and inner strength. We prioritize caring for every child, knowing that today’s nurturing will lead to tomorrow’s confident, capable individuals, ready to face life’s challenges. These students, like precious butterflies, are our greatest legacy.
+              At National Public School, Jalahalli, students learn life skills,
+              critical thinking, and the art of living. Like caterpillars in a
+              chrysalis, they undergo gradual transformation, nurtured by the
+              school’s protective environment and dedicated teachers who act as
+              catalysts for growth. Our mission is to shape future
+              leaders—surgeons, engineers, scientists, and more—by fostering
+              resilience and inner strength. We prioritize caring for every
+              child, knowing that today’s nurturing will lead to tomorrow’s
+              confident, capable individuals, ready to face life’s challenges.
+              These students, like precious butterflies, are our greatest
+              legacy.
             </p>
             <p className=" my-6">
               My best wishes to the students of NPS Jalahalli and their parents.
