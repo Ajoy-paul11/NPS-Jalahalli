@@ -69,7 +69,7 @@ function MobileView() {
                       <Link to={"/student-activity"}>Student Activity</Link>
                     </li>
                     <li className=" cursor-pointer ">
-                      <Link to={"/grade-11"}>Grade-11 & 12</Link>
+                      <Link to={"/grade-11"}>Grade-11</Link>
                     </li>
                     <li className=" cursor-pointer group">
                       <Link>Achievement {" "}<IoIosArrowDown className=" inline-block"/></Link>
@@ -156,7 +156,7 @@ function MobileView() {
                   <Link to={"/student-activity"}>Student Activity</Link>
                 </li>
                 <li className=" cursor-pointer ">
-                  <Link to={"/grade-11"}>Grade-11 & 12</Link>
+                  <Link to={"/grade-11"}>Grade-11</Link>
                 </li>
                 <li className=" cursor-pointer group">
                   <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>

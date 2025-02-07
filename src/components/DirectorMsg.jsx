@@ -69,7 +69,7 @@ function MobileView() {
                   <Link to={"/student-activity"}>Student Activity</Link>
                 </li>
                 <li className=" cursor-pointer ">
-                  <Link to={"/grade-11"}>Grade-11 & 12</Link>
+                  <Link to={"/grade-11"}>Grade-11</Link>
                 </li>
                 <li className=" cursor-pointer group">
                   <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
@@ -150,7 +150,7 @@ function LargeView() {
                 <Link to={"/student-activity"}>Student Activity</Link>
               </li>
               <li className=" cursor-pointer ">
-                <Link to={"/grade-11"}>Grade-11 & 12</Link>
+                <Link to={"/grade-11"}>Grade-11</Link>
               </li>
               <li className=" cursor-pointer group">
                 <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
@@ -234,22 +234,7 @@ function DirectorMsg() {
               through the corridors of school life.
             </p>
             <p>
-              Here they learn life skills, techniques of learning and art of
-              living. It is here, in the school, that children undergo changes.
-              In the chrysalis of life, children undergo metamorphosis. The
-              change that takes place in the overall personality of the child is
-              slow but sure. National Public School, Jalahalli will be the
-              architect of this change. We will build a Statesman, a Surgeon, an
-              Engineer, an Advocate, another Teacher, a Scientist, etc. We at
-              National Public School, Jalahalli know that if we have to have
-              butterflies in this world, we must give love and care for the
-              caterpillars who come to us and that will be our effort day in and
-              day out. The school, the Chrysalis will protect the children and
-              the teachers will be the catalysts, the driving force, behind this
-              change. And when our little, bejeweled butterflies, take to their
-              wings, with the inner strength to face all life’s challenges, we
-              know that these jewels are priceless for National Public School,
-              Jalahalli.
+              At National Public School, Jalahalli, students learn life skills, critical thinking, and the art of living. Like caterpillars in a chrysalis, they undergo gradual transformation, nurtured by the school’s protective environment and dedicated teachers who act as catalysts for growth. Our mission is to shape future leaders—surgeons, engineers, scientists, and more—by fostering resilience and inner strength. We prioritize caring for every child, knowing that today’s nurturing will lead to tomorrow’s confident, capable individuals, ready to face life’s challenges. These students, like precious butterflies, are our greatest legacy.
             </p>
             <p className=" my-6">
               My best wishes to the students of NPS Jalahalli and their parents.
