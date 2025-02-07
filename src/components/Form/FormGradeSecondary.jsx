@@ -292,7 +292,6 @@ function FormGradeSecondary() {
                   <SelectContent>
                     <SelectGroup>
                       <SelectItem value="grade-11">Grade 11</SelectItem>
-                      <SelectItem value="grade-12">Grade 12</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>

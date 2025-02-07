@@ -11,6 +11,7 @@ import PrincipalMsg from './components/PrincipalMsg'
 import StudentActivity from './components/StudentActivity'
 import StudentAchievement from './components/StudentAchievement'
 import TeacherAchievement from './components/TeacherAchievement'
+import ErrorComponent from './components/ErrorComponent'
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
   {
     path: "/teacher-achievement",
     element: <TeacherAchievement />
+  },
+  {
+    path: "/library",
+    element: <ErrorComponent />
+  },
+  {
+    path: "*",
+    element: <ErrorComponent />
   }
 ])
 
