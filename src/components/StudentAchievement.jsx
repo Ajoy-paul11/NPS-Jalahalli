@@ -89,11 +89,11 @@ function MobileView() {
                     </Link>
                     <div className=" hidden group-hover:block">
                       <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[680px] p-1 rounded-lg">
-                        <li className=" cursor-pointer p-1 text-base">
+                        <li className=" cursor-pointer p-1 px-5 text-base">
                           {" "}
                           <Link to={"/student-achievement"}>Student</Link>
                         </li>
-                        <li className=" cursor-pointer p-1 text-base">
+                        <li className=" cursor-pointer p-1 px-5 text-base">
                           <Link to={"/teacher-achievement"}>Teacher</Link>
                         </li>
                       </ul>
@@ -259,10 +259,10 @@ function LargeView() {
                 </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">
+                    <li className=" cursor-pointer p-1 px-8 text-base">
                       <Link to={"/student-achievement"}>Student</Link>
                     </li>
-                    <li className=" cursor-pointer p-1 text-base">
+                    <li className=" cursor-pointer p-1 px-8 text-base">
                       <Link to={"/teacher-achievement"}>Teacher</Link>
                     </li>
                   </ul>
@@ -380,9 +380,9 @@ function LargeView() {
 
 function ModalForm({ setOpen }) {
   return (
-    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-[#5f9ce0]">
+    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-white/50">
       <div className=" relative  mx-auto">
-        <div className=" relative rounded-lg shadow-xl">
+        <div className=" relative rounded-lg shadow-xl bg-slate-500">
           <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
             <RxCross2
               className=" text-white h-6 w-6 hover:text-black duration-200"

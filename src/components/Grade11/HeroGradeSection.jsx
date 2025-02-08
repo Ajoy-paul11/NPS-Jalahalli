@@ -78,10 +78,10 @@ function MobileView() {
                   </Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
-                      <li className=" cursor-pointer p-1 text-base">
+                      <li className=" cursor-pointer p-1 px-5 text-base">
                         <Link to={"/student-achievement"}>Student</Link>
                       </li>
-                      <li className=" cursor-pointer p-1 text-base">
+                      <li className=" cursor-pointer p-1 px-5 text-base">
                         <Link to={"/teacher-achievement"}>Teacher</Link>
                       </li>
                     </ul>
@@ -95,7 +95,7 @@ function MobileView() {
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
-          Senior Secondary Wing: <br className=" hidden lg:block xl:hidden" />{" "}
+          Grade 11: <br className=" hidden lg:block xl:hidden" />{" "}
           <span className=" text-blue">NPS Jalahalli </span>
         </h1>
       </div>
@@ -163,10 +163,10 @@ function LargeView() {
                 </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">
+                    <li className=" cursor-pointer p-1 px-8 text-base">
                       <Link to={"/student-achievement"}>Student</Link>
                     </li>
-                    <li className=" cursor-pointer p-1 text-base">
+                    <li className=" cursor-pointer p-1 px-8 text-base">
                       <Link to={"/teacher-achievement"}>Teacher</Link>
                     </li>
                   </ul>
@@ -177,9 +177,9 @@ function LargeView() {
         </div>
       </div>
 
-      <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
+      <div className=" md:absolute lg:top-[170px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
         <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
-          Senior Secondary Wing: <br className=" hidden lg:block xl:hidden" />{" "}
+          Grade 11: <br className=" hidden lg:block xl:hidden" />{" "}
           <span className=" text-blue">NPS Jalahalli </span>
         </h1>
       </div>

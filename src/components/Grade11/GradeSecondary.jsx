@@ -10,9 +10,9 @@ import FormGradeSecondary from "../Form/FormGradeSecondary";
 
 function ModalForm({ setOpen }) {
   return (
-    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-[#5f9ce0]">
+    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-white/40">
       <div className=" relative  mx-auto">
-        <div className=" relative rounded-lg shadow-xl">
+        <div className=" relative rounded-lg shadow-xl bg-slate-500">
           <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
             <RxCross2
               className=" text-white h-6 w-6 hover:text-black duration-200"
