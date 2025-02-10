@@ -22,13 +22,14 @@ import achievement13 from "../assets/student-achievement/student-achievement13.p
 import achievement14 from "../assets/student-achievement/student-achievement14.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import FormBackground from "./Form/FormBackground";
 
 function MobileView() {
   const [open, setOpen] = useState(false);
 
   return (
     <div className=" min-h-screen flex flex-col">
-      <div className="w-full bg-[#a2cefe] backdrop-blur-md shadow-sm">
+      <div className="w-full bg-[rgba(255,255,255,0.4)] backdrop-blur-md shadow-sm">
         <div className="  p-4 flex flex-col lg:flex-row lg:justify-evenly items-center gap-4">
           <Link to={"/"}>
             <img
@@ -105,10 +106,10 @@ function MobileView() {
           )}
         </div>
       </div>
-      <div className="flex-1 bg-[#5f9ce0] flex relative">
+      <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
           <div className=" w-full top-[130px] h-[calc(100vh-130px)] bg-[#5f9ce0] py-8 place-items-center lg:pl-0 xl:pl-8">
-            <FormAdmission />
+            <FormBackground />
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
             <div className=" ">
@@ -218,7 +219,7 @@ function LargeView() {
           <Tagline />
         </Marquee>
       </div>
-      <div className="w-full bg-[#a2cefe]  px-4 py-1">
+      <div className="w-full  bg-[rgba(255,255,255,0.4)] backdrop-blur-lg px-4 py-1">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between items-center gap-4">
           <Link to={"/"}>
             <img
@@ -272,7 +273,7 @@ function LargeView() {
           </nav>
         </div>
       </div>
-      <div className="flex-1 bg-[#5f9ce0] flex relative">
+      <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-2/3 p-4 overflow-y-auto">
           <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">
             <div className=" w-[400px] h-[300px] lg:w-[300px] lg:h-[225px] xl:w-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[375px] ">
@@ -367,10 +368,8 @@ function LargeView() {
               />
             </div>
           </div>
-          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] bg-[#5f9ce0] p-8 lg:pl-0 xl:pl-8">
-            <div className=" ">
-              <FormAdmission />
-            </div>
+          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8">
+              <FormBackground />
           </div>
         </div>
       </div>
@@ -397,8 +396,8 @@ function ModalForm({ setOpen }) {
 }
 
 function StudentAchievement() {
-    const [open, setOpen] = useState(false);
-  
+  const [open, setOpen] = useState(false);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -413,20 +412,17 @@ function StudentAchievement() {
   }, []);
 
   useEffect(() => {
-      const timer = setTimeout(() => {
-        setOpen(true)
-      }, 10000)
-  
-      return () => clearTimeout(timer)
-  
-    }, [])
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div>
-      { open ? <ModalForm setOpen={setOpen}/> : "" }
-      <div>
-        {windowWidth < 1024 ? <MobileView /> : <LargeView />}
-      </div>
+      {open ? <ModalForm setOpen={setOpen} /> : ""}
+      <div>{windowWidth < 1024 ? <MobileView /> : <LargeView />}</div>
     </div>
   );
 }
