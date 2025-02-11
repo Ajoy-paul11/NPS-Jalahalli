@@ -111,7 +111,7 @@ function MobileView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
-          <div className=" w-full top-[130px] h-[calc(100vh-130px)] bg-[#5f9ce0] py-8 place-items-center lg:pl-0 xl:pl-8">
+          <div className=" w-full top-[130px] h-[calc(100vh-130px)] py-8 place-items-center lg:pl-0 xl:pl-8">
             <FormBackground />
           </div>
           <div className=" grid md:grid-cols-2 gap-8">

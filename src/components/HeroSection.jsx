@@ -48,7 +48,9 @@ function MobileView() {
             <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
               <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                 <li className=" cursor-pointer group">
-                  <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                  <Link>
+                    About Us <IoIosArrowDown className=" inline-block" />
+                  </Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-28 p-1 rounded-lg">
                       <li className=" cursor-pointer p-1 text-base">
@@ -70,15 +72,21 @@ function MobileView() {
                   <Link to={"/grade-11"}>Grade-11</Link>
                 </li>
                 <li className=" cursor-pointer group">
-                  <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                  <Link>
+                    Achievement <IoIosArrowDown className=" inline-block" />
+                  </Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
-                      <li className=" cursor-pointer p-1 px-8 text-base">
+                      <li className=" cursor-pointer p-1 text-base">
                         {" "}
-                        <Link to={"/student-achievement"}>Student</Link>
+                        <Link to={"/student-achievement"}>
+                          Student Achievement
+                        </Link>
                       </li>
-                      <li className=" cursor-pointer p-1 px-8 text-base">
-                        <Link to={"/teacher-achievement"}>Teacher</Link>
+                      <li className=" cursor-pointer p-1 text-base">
+                        <Link to={"/teacher-achievement"}>
+                          Teacher Achievement
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -130,7 +138,9 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                <Link>
+                  About Us <IoIosArrowDown className=" inline-block" />
+                </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
@@ -152,14 +162,20 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                <Link>
+                  Achievement <IoIosArrowDown className=" inline-block" />
+                </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/student-achievement"}>Student</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/student-achievement"}>
+                        Student Achievement
+                      </Link>
                     </li>
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/teacher-achievement"}>Teacher</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/teacher-achievement"}>
+                        Teacher Achievement
+                      </Link>
                     </li>
                   </ul>
                 </div>

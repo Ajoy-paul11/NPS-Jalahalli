@@ -12,6 +12,7 @@ import StudentActivity from './components/StudentActivity'
 import StudentAchievement from './components/StudentAchievement'
 import TeacherAchievement from './components/TeacherAchievement'
 import ErrorComponent from './components/ErrorComponent'
+import Library from './components/Library'
 
 const router = createBrowserRouter([
   {
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/library",
-    element: <ErrorComponent />
+    element: <Library />
   },
   {
     path: "*",
