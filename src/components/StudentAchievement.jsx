@@ -29,7 +29,7 @@ function MobileView() {
 
   return (
     <div className=" min-h-screen flex flex-col">
-      <div className="w-full bg-[rgba(255,255,255,0.4)] backdrop-blur-md shadow-sm">
+      <div className="w-full bg-[#a2cefe] backdrop-blur-md shadow-sm">
         <div className="  p-4 flex flex-col lg:flex-row lg:justify-evenly items-center gap-4">
           <Link to={"/"}>
             <img
@@ -219,7 +219,7 @@ function LargeView() {
           <Tagline />
         </Marquee>
       </div>
-      <div className="w-full  bg-[rgba(255,255,255,0.4)] backdrop-blur-lg px-4 py-1">
+      <div className="w-full  bg-[rgba(255,255,255,0.4)] backdrop-blur-lg px-4 py-1 z-50">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between items-center gap-4">
           <Link to={"/"}>
             <img
@@ -235,7 +235,7 @@ function LargeView() {
                   About Us <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-2 rounded-lg">
+                  <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-lg">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
@@ -259,7 +259,7 @@ function LargeView() {
                   Achievement <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-1 rounded-lg">
+                  <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-lg">
                     <li className=" cursor-pointer p-1 px-8 text-base">
                       <Link to={"/student-achievement"}>Student</Link>
                     </li>
@@ -273,7 +273,7 @@ function LargeView() {
           </nav>
         </div>
       </div>
-      <div className="flex-1 bg-[#f4f5ff] flex relative">
+      <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
           <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">
             <div className=" w-[400px] h-[300px] lg:w-[300px] lg:h-[225px] xl:w-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[375px] ">
@@ -368,7 +368,7 @@ function LargeView() {
               />
             </div>
           </div>
-          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8">
+          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8 z-40">
               <FormBackground />
           </div>
         </div>
@@ -388,7 +388,7 @@ function ModalForm({ setOpen }) {
               onClick={() => setOpen(false)}
             />
           </div>
-          <FormAdmission />
+          <FormBackground />
         </div>
       </div>
     </div>

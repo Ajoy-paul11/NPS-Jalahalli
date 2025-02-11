@@ -108,7 +108,7 @@ function MobileView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
-          <div className=" w-full top-[130px] h-[calc(100vh-130px)] bg-[#5f9ce0] py-8 place-items-center lg:pl-0 xl:pl-8">
+          <div className=" w-full top-[130px] h-[calc(100vh-130px)]  py-8 place-items-center lg:pl-0 xl:pl-8">
             <FormBackground />
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
@@ -176,7 +176,7 @@ function LargeView() {
           <Tagline />
         </Marquee>
       </div>
-      <div className="w-full bg-[rgba(255,255,255,0.4)] backdrop-blur-lg  px-4 py-1">
+      <div className="w-full bg-[rgba(255,255,255,0.4)] backdrop-blur-lg  px-4 py-1 z-50">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between items-center gap-4">
           <Link to={"/"}>
             <img
@@ -190,11 +190,11 @@ function LargeView() {
               <li className=" cursor-pointer group">
                 <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-2 rounded-lg">
-                    <li className=" cursor-pointer p-1 text-base">
+                  <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-lg">
+                    <li className=" cursor-pointer p-1 text-base text-blue">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
-                    <li className=" cursor-pointer p-1 text-base">
+                    <li className=" cursor-pointer p-1 text-base text-blue">
                       <Link to={"/principal-message"}>Principal Message</Link>
                     </li>
                   </ul>
@@ -212,7 +212,7 @@ function LargeView() {
               <li className=" cursor-pointer group">
                 <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[100px] z-10 p-1 rounded-lg">
+                  <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-lg">
                     <li className=" cursor-pointer p-1 px-8 text-base">
                       <Link to={"/student-achievement"}>Student</Link>
                     </li>
@@ -226,7 +226,7 @@ function LargeView() {
           </nav>
         </div>
       </div>
-      <div className="flex-1 bg-[#f4f5ff] flex relative">
+      <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
           <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">
             <div className=" w-[400px] h-[300px] lg:w-[300px] lg:h-[225px] xl:w-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[375px] ">
@@ -342,7 +342,7 @@ function LargeView() {
               />
             </div>
           </div>
-          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8">
+          <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8 z-40">
               <FormBackground />
           </div>
         </div>
@@ -353,13 +353,13 @@ function LargeView() {
 
 function ModalForm({setOpen}) {
   return (
-    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-white/40">
+    <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-[100] bg-white/40">
       <div className=" relative  mx-auto">
         <div className=" relative rounded-lg shadow-xl bg-slate-500">
           <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
             <RxCross2 className=" text-white h-6 w-6 hover:text-black duration-200" onClick={() => setOpen(false)}/>
           </div>
-          <FormAdmission />
+          <FormBackground />
         </div>
       </div>
     </div>

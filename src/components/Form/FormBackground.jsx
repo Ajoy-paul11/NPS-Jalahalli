@@ -156,7 +156,7 @@ function FormBackground() {
   };
 
   return (
-    <div className=" w-[380px] lg:w-[330px] xl:w-[380px] overflow-hidden space-y-8 bg-gray-500  rounded-lg">
+    <div className=" w-[380px] lg:w-[330px] xl:w-[380px] overflow-hidden space-y-8 bg-gray-500 rounded-lg">
       <h2 className=" text-2xl text-center font-bold text-white my-4">
         Admission Form <br />
         for <span className=" text-blue">2025-26</span>
@@ -291,7 +291,7 @@ function FormBackground() {
                   <SelectTrigger className="max-w-sm text-gray-200">
                     <SelectValue placeholder="Select class Applying for" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="z-[200]">
                     <SelectGroup>
                       <SelectItem value="nursery">Nursery</SelectItem>
                       <SelectItem value="lkg">LKG</SelectItem>
