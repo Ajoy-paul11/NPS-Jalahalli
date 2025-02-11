@@ -75,12 +75,12 @@ function MobileView() {
                   <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                   <div className=" hidden group-hover:block">
                     <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[515px] p-1 rounded-lg">
-                      <li className=" cursor-pointer p-1 px-5 text-base">
+                      <li className=" cursor-pointer p-1 text-base">
                         {" "}
-                        <Link to={"/student-achievement"}>Student</Link>
+                        <Link to={"/student-achievement"}>Student Achievement</Link>
                       </li>
-                      <li className=" cursor-pointer p-1 px-5 text-base">
-                        <Link to={"/teacher-achievement"}>Teacher</Link>
+                      <li className=" cursor-pointer p-1 text-base">
+                        <Link to={"/teacher-achievement"}>Teacher Achievement</Link>
                       </li>
                     </ul>
                   </div>
@@ -157,11 +157,11 @@ function LargeView() {
                 <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/student-achievement"}>Student</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/student-achievement"}>Student Achievement</Link>
                     </li>
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/teacher-achievement"}>Teacher</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/teacher-achievement"}>Teacher Achievement</Link>
                     </li>
                   </ul>
                 </div>

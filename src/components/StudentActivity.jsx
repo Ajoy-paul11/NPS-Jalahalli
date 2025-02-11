@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import jalahalli from "../assets/NPS-logo.jpg";
 import Marquee from "react-fast-marquee";
-import FormAdmission from "./Form/Form";
 import Tagline from "./Tagline";
 import { Form, Link } from "react-router-dom";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
-import Footer from "./Footer";
 import activity1 from "../assets/activity/activity1-jalahalli.jpg";
 import activity2 from "../assets/activity/activity2-jalahalli.jpg";
 import activity3 from "../assets/activity/activity3-jalahalli.jpg";
@@ -26,7 +24,6 @@ import yoga6 from "../assets/activity/yoga6.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import FormBackground from "./Form/FormBackground";
-
 
 function MobileView() {
   const [open, setOpen] = useState(false);
@@ -63,7 +60,9 @@ function MobileView() {
               <nav className=" h-[600px] text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2 flex items-center justify-center">
                 <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                   <li className=" cursor-pointer group">
-                    <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                    <Link>
+                      About Us <IoIosArrowDown className=" inline-block" />
+                    </Link>
                     <div className=" hidden group-hover:block">
                       <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[275px] p-1 rounded-lg">
                         <li className=" cursor-pointer p-1 text-base">
@@ -87,15 +86,21 @@ function MobileView() {
                     <Link to={"/grade-11"}>Grade-11</Link>
                   </li>
                   <li className=" cursor-pointer group">
-                    <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                    <Link>
+                      Achievement <IoIosArrowDown className=" inline-block" />
+                    </Link>
                     <div className=" hidden group-hover:block">
                       <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[680px] p-1 rounded-lg">
-                        <li className=" cursor-pointer p-1 px-5 text-base">
+                        <li className=" cursor-pointer p-1 text-base">
                           {" "}
-                          <Link to={"/student-achievement"}>Student</Link>
+                          <Link to={"/student-achievement"}>
+                            Student Achievement
+                          </Link>
                         </li>
-                        <li className=" cursor-pointer p-1 px-5 text-base">
-                          <Link to={"/teacher-achievement"}>Teacher</Link>
+                        <li className=" cursor-pointer p-1 text-base">
+                          <Link to={"/teacher-achievement"}>
+                            Teacher Achievement
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -113,52 +118,64 @@ function MobileView() {
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
             <div className=" ">
-              <img src={activity1} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity1} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity2} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity2} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className=" ">
-              <img src={activity3} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity3} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className=" ">
-              <img src={activity4} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity4} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity5} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity5} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity6} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity6} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity7} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity7} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity8} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity8} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity9} alt="activity-img" className=" rounded-lg"/>
+              <img src={activity9} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity10} alt="activity-img" className=" rounded-lg"/>
+              <img
+                src={activity10}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
-              <img src={activity11} alt="activity-img" className=" rounded-lg"/>
+              <img
+                src={activity11}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
-              <img src={activity12} alt="activity-img" className=" rounded-lg"/>
+              <img
+                src={activity12}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
-              <img src={yoga3} alt="activity-img" className=" rounded-lg"/>
+              <img src={yoga3} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={yoga4} alt="activity-img" className=" rounded-lg"/>
+              <img src={yoga4} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={yoga5} alt="activity-img" className=" rounded-lg"/>
+              <img src={yoga5} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={yoga6} alt="activity-img" className=" rounded-lg"/>
+              <img src={yoga6} alt="activity-img" className=" rounded-lg" />
             </div>
           </div>
         </div>
@@ -188,7 +205,9 @@ function LargeView() {
           <nav className=" text-blue font-semibold text-sm lg:text-base xl:text-lg px-4 py-2">
             <ul className=" flex gap-8 lg:justify-between xl:justify-evenly items-center">
               <li className=" cursor-pointer group">
-                <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                <Link>
+                  About Us <IoIosArrowDown className=" inline-block" />
+                </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-lg">
                     <li className=" cursor-pointer p-1 text-base text-blue">
@@ -210,14 +229,20 @@ function LargeView() {
                 <Link to={"/grade-11"}>Grade-11</Link>
               </li>
               <li className=" cursor-pointer group">
-                <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
+                <Link>
+                  Achievement <IoIosArrowDown className=" inline-block" />
+                </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-lg">
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/student-achievement"}>Student</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/student-achievement"}>
+                        Student Achievement
+                      </Link>
                     </li>
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/teacher-achievement"}>Teacher</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/teacher-achievement"}>
+                        Teacher Achievement
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -343,7 +368,7 @@ function LargeView() {
             </div>
           </div>
           <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8 z-40">
-              <FormBackground />
+            <FormBackground />
           </div>
         </div>
       </div>
@@ -351,13 +376,16 @@ function LargeView() {
   );
 }
 
-function ModalForm({setOpen}) {
+function ModalForm({ setOpen }) {
   return (
     <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-[100] bg-white/40">
       <div className=" relative  mx-auto">
         <div className=" relative rounded-lg shadow-xl bg-slate-500">
           <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
-            <RxCross2 className=" text-white h-6 w-6 hover:text-black duration-200" onClick={() => setOpen(false)}/>
+            <RxCross2
+              className=" text-white h-6 w-6 hover:text-black duration-200"
+              onClick={() => setOpen(false)}
+            />
           </div>
           <FormBackground />
         </div>
@@ -383,19 +411,16 @@ function StudentActivity() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setOpen(true)
-    }, 10000)
+      setOpen(true);
+    }, 10000);
 
-    return () => clearTimeout(timer)
-
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div>
-      { open ? <ModalForm setOpen={setOpen}/> : "" }
-      <div>
-        {windowWidth < 1024 ? <MobileView /> : <LargeView />}
-      </div>
+      {open ? <ModalForm setOpen={setOpen} /> : ""}
+      <div>{windowWidth < 1024 ? <MobileView /> : <LargeView />}</div>
     </div>
   );
 }

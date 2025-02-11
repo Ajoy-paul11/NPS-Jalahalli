@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import jalahalli from "../assets/NPS-logo.jpg";
 import Marquee from "react-fast-marquee";
-import FormAdmission from "./Form/Form";
 import Tagline from "./Tagline";
 import { Link } from "react-router-dom";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -90,12 +89,16 @@ function MobileView() {
                     </Link>
                     <div className=" hidden group-hover:block">
                       <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[680px] p-1 rounded-lg">
-                        <li className=" cursor-pointer p-1 px-5 text-base">
+                        <li className=" cursor-pointer p-1 text-base">
                           {" "}
-                          <Link to={"/student-achievement"}>Student</Link>
+                          <Link to={"/student-achievement"}>
+                            Student Achievement
+                          </Link>
                         </li>
-                        <li className=" cursor-pointer p-1 px-5 text-base">
-                          <Link to={"/teacher-achievement"}>Teacher</Link>
+                        <li className=" cursor-pointer p-1 text-base">
+                          <Link to={"/teacher-achievement"}>
+                            Teacher Achievement
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -260,11 +263,15 @@ function LargeView() {
                 </Link>
                 <div className=" hidden group-hover:block">
                   <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-lg">
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/student-achievement"}>Student</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/student-achievement"}>
+                        Student Achievement
+                      </Link>
                     </li>
-                    <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/teacher-achievement"}>Teacher</Link>
+                    <li className=" cursor-pointer p-1 text-base">
+                      <Link to={"/teacher-achievement"}>
+                        Teacher Achievement
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -369,7 +376,7 @@ function LargeView() {
             </div>
           </div>
           <div className=" w-1/3 fixed right-0 top-[160px] h-[calc(100vh-130px)] p-8 lg:pl-0 xl:pl-8 z-40">
-              <FormBackground />
+            <FormBackground />
           </div>
         </div>
       </div>

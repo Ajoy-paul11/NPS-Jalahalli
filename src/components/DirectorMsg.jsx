@@ -166,10 +166,10 @@ function LargeView() {
                 <div className=" hidden group-hover:block">
                   <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/student-achievement"}>Student</Link>
+                      <Link to={"/student-achievement"}>Student Achievement</Link>
                     </li>
                     <li className=" cursor-pointer p-1 px-8 text-base">
-                      <Link to={"/teacher-achievement"}>Teacher</Link>
+                      <Link to={"/teacher-achievement"}>Teacher Achievement</Link>
                     </li>
                   </ul>
                 </div>
