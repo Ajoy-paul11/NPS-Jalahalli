@@ -12,8 +12,15 @@ import achievement3 from "../assets/teacher-achievement/teacher-achievement3.jpe
 import achievement4 from "../assets/teacher-achievement/teacher-achievement4.jpeg";
 import { RxCross2 } from "react-icons/rx";
 import FormBackground from "./Form/FormBackground";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function MobileView() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+    });
+  });
   const [open, setOpen] = useState(false);
 
   return (
@@ -101,12 +108,16 @@ function MobileView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
+          <h2 data-aos="slide-right" className=" text-3xl text-blue font-bold p-4 text-center">
+            Teacher Achievement
+          </h2>
           <div className=" w-full top-[130px] h-[calc(100vh-130px)]  py-8 place-items-center lg:pl-0 xl:pl-8">
             <FormBackground />
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
             <div className=" ">
               <img
+                data-aos="zoom-in"
                 src={achievement1}
                 alt="activity-img"
                 className=" rounded-lg"
@@ -114,6 +125,7 @@ function MobileView() {
             </div>
             <div className="">
               <img
+                data-aos="zoom-in"
                 src={achievement2}
                 alt="activity-img"
                 className=" rounded-lg"
@@ -121,6 +133,7 @@ function MobileView() {
             </div>
             <div className=" ">
               <img
+                data-aos="zoom-in"
                 src={achievement3}
                 alt="activity-img"
                 className=" rounded-lg"
@@ -128,6 +141,7 @@ function MobileView() {
             </div>
             <div className=" ">
               <img
+                data-aos="zoom-in"
                 src={achievement4}
                 alt="activity-img"
                 className=" rounded-lg"
@@ -141,6 +155,11 @@ function MobileView() {
 }
 
 function LargeView() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+    });
+  })
   return (
     <div className=" min-h-screen flex flex-col">
       <div className=" w-full bg-blue-500 rounded-sm py-2 px-2 ">
@@ -209,9 +228,16 @@ function LargeView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
+        <h2
+            data-aos="slide-right"
+            className=" text-4xl text-blue font-bold p-6 text-center"
+          >
+            Teacher Achievement
+          </h2>
           <div className=" grid grid-cols-1 gap-8 place-items-center px-6 mt-16">
             <div className=" 2xl:w-[80%] 2xl:h-[800px]">
               <img
+                data-aos="zoom-in"
                 src={achievement1}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -219,6 +245,7 @@ function LargeView() {
             </div>
             <div className=" 2xl:w-[80%] 2xl:h-[800px]">
               <img
+                data-aos="zoom-in"
                 src={achievement2}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -226,6 +253,7 @@ function LargeView() {
             </div>
             <div className=" 2xl:w-[80%] 2xl:h-[800px]">
               <img
+                data-aos="zoom-in"
                 src={achievement3}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -233,6 +261,7 @@ function LargeView() {
             </div>
             <div className=" 2xl:w-[80%] 2xl:h-[800px]">
               <img
+                data-aos="zoom-in"
                 src={achievement4}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"

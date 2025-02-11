@@ -24,8 +24,15 @@ import yoga6 from "../assets/activity/yoga6.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import FormBackground from "./Form/FormBackground";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function MobileView() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  });
   const [open, setOpen] = useState(false);
 
   return (
@@ -113,36 +120,39 @@ function MobileView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
+          <h2 className=" text-3xl text-blue font-bold p-4 text-center">
+            Student Activity
+          </h2>
           <div className=" w-full top-[130px] h-[calc(100vh-130px)]  py-8 place-items-center lg:pl-0 xl:pl-8">
             <FormBackground />
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
             <div className=" ">
-              <img src={activity1} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={activity1} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
               <img src={activity2} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className=" ">
-              <img src={activity3} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={activity3} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className=" ">
-              <img src={activity4} alt="activity-img" className=" rounded-lg" />
+              <img  src={activity4} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity5} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={activity5} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
               <img src={activity6} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity7} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={activity7} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
               <img src={activity8} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={activity9} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={activity9} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
               <img
@@ -153,6 +163,7 @@ function MobileView() {
             </div>
             <div className="">
               <img
+              data-aos="zoom-in"
                 src={activity11}
                 alt="activity-img"
                 className=" rounded-lg"
@@ -166,13 +177,13 @@ function MobileView() {
               />
             </div>
             <div className="">
-              <img src={yoga3} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={yoga3} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
               <img src={yoga4} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img src={yoga5} alt="activity-img" className=" rounded-lg" />
+              <img data-aos="zoom-in" src={yoga5} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
               <img src={yoga6} alt="activity-img" className=" rounded-lg" />
@@ -185,6 +196,11 @@ function MobileView() {
 }
 
 function LargeView() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  });
   return (
     <div className=" min-h-screen flex flex-col">
       <div className=" w-full bg-blue-500 rounded-sm py-2 px-2 ">
@@ -253,9 +269,13 @@ function LargeView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
+          <h2 className=" text-4xl text-blue font-bold p-6 text-center">
+            Student Activity
+          </h2>
           <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">
             <div className=" w-[400px] h-[300px] lg:w-[300px] lg:h-[225px] xl:w-[400px] xl:h-[300px] 2xl:w-[500px] 2xl:h-[375px] ">
               <img
+                data-aos="zoom-in"
                 src={activity1}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -277,6 +297,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={activity4}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -284,6 +305,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={activity5}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -305,6 +327,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={activity8}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -312,6 +335,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={activity9}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -333,6 +357,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={activity12}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -340,6 +365,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={yoga3}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
@@ -361,6 +387,7 @@ function LargeView() {
             </div>
             <div className=" w-[400px] h-[400px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px]">
               <img
+                data-aos="zoom-in"
                 src={yoga6}
                 alt="activity-img"
                 className=" w-full h-full rounded-lg"
