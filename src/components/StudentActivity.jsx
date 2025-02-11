@@ -120,7 +120,7 @@ function MobileView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
-          <h2 className=" text-3xl text-blue font-bold p-4 text-center">
+          <h2 data-aos="slide-right" className=" text-3xl text-blue font-bold p-4 text-center">
             Student Activity
           </h2>
           <div className=" w-full top-[130px] h-[calc(100vh-130px)]  py-8 place-items-center lg:pl-0 xl:pl-8">
@@ -269,7 +269,7 @@ function LargeView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
-          <h2 className=" text-4xl text-blue font-bold p-6 text-center">
+          <h2 data-aos="slide-right" className=" text-4xl text-blue font-bold p-6 text-center">
             Student Activity
           </h2>
           <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">

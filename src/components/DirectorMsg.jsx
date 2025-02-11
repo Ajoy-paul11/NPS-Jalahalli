@@ -10,9 +10,16 @@ import { RxCross1 } from "react-icons/rx";
 import Footer from "./Footer";
 import director from "../assets/nps-director.jpg";
 import { IoIosArrowDown } from "react-icons/io";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 function MobileView() {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  })
   const [open, setOpen] = useState(false);
 
   return (
@@ -97,12 +104,12 @@ function MobileView() {
       </div>
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
-        <h1 className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
+        <h1 data-aos="slide-right" className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
           Academic <span className=" text-blue"> Director's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
-        <div className="  bg-white/10 order-1">
+        <div data-aos="slide-up" className="  bg-white/10 order-1">
           <FormAdmission />
         </div>
       </div>
@@ -111,6 +118,11 @@ function MobileView() {
 }
 
 function LargeView() {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  })
   return (
     <div
       style={{
@@ -180,12 +192,12 @@ function LargeView() {
       </div>
 
       <div className=" md:absolute lg:top-[215px] xl:top-[170px] 2xl:top-[250px] md:left-[120px] lg:left-[140px] xl:left-[215px] 2xl:left-[330px]">
-        <h1 className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
+        <h1 data-aos="slide-right" className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
           Academic <span className=" text-blue">Director's </span> Message
         </h1>
       </div>
       <div className=" container mx-auto p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-8 lg:justify-end">
-        <div className="  bg-white/10 order-1">
+        <div data-aos="slide-up" className="  bg-white/10 order-1">
           <FormAdmission />
         </div>
       </div>
