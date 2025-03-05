@@ -132,7 +132,7 @@ function LargeView() {
           <Tagline />
         </Marquee>
       </div>
-      <div className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg px-4 py-1 flex flex-col lg:flex-row lg:justify-evenly items-center gap-4">
+      <div className=" bg-[#f4f5ff] backdrop-blur-lg px-4 py-1 flex flex-col lg:flex-row lg:justify-evenly items-center gap-4 shadow-xl shadow-black/70">
         <Link to={"/"}>
           <img
             src={jalahalli}
@@ -146,7 +146,7 @@ function LargeView() {
               <li className=" cursor-pointer group">
                 <Link>About Us{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
+                  <ul className=" shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff] backdrop-blur-lg absolute top-14 p-2 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
@@ -168,7 +168,7 @@ function LargeView() {
               <li className=" cursor-pointer group">
                 <Link>Achievement{" "}<IoIosArrowDown className=" inline-block"/></Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
+                  <ul className=" shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff] backdrop-blur-lg absolute top-14 p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/student-achievement"}>Student Achievement</Link>
                     </li>

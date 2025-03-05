@@ -245,7 +245,7 @@ function LargeView() {
           <Tagline />
         </Marquee>
       </div>
-      <div className="w-full  bg-[rgba(255,255,255,0.4)] backdrop-blur-lg px-4 py-1 z-50">
+      <div className="w-full  bg-[rgba(255,255,255,0.4)] backdrop-blur-lg px-4 py-1 z-50 shadow-lg shadow-black/60">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-between items-center gap-4">
           <Link to={"/"}>
             <img
@@ -261,7 +261,7 @@ function LargeView() {
                   About Us <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-lg">
+                  <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
@@ -285,7 +285,7 @@ function LargeView() {
                   Achievement <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-lg">
+                  <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
                     <li className=" cursor-pointer p-1 text-base">
                       <Link to={"/student-achievement"}>
                         Student Achievement
