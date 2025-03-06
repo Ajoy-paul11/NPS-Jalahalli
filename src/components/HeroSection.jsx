@@ -33,7 +33,7 @@ function MobileView() {
             <Tagline />
           </Marquee>
         </div>
-        <div className=" p-1 cursor-pointer text-blue absolute top-[110px] right-[5px]">
+        <div className=" p-1 cursor-pointer text-black absolute top-[105px] right-[1px] ">
           {open ? (
             <RxCross1 className=" w-8 h-8" onClick={() => setOpen(!open)} />
           ) : (
@@ -44,46 +44,50 @@ function MobileView() {
           )}
         </div>
         {open && (
-          <div className=" w-full h-[57vh] bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
-            <nav className=" h-[450px] text-black text-sm px-4 py-2 flex items-center justify-center">
-              <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
-                <li className=" cursor-pointer group">
+          <div className=" w-full h-fit bg-[rgba(255,255,255,0.7)] backdrop-blur-lg">
+            <nav className="  text-black text-xs px-4 py-2 flex w-full ">
+              <ul className=" h-full flex flex-col  gap-0.5 w-full">
+                <li className=" cursor-pointer group  py-1 rounded px-2 ">
                   <Link>
                     About Us <IoIosArrowDown className=" inline-block" />
                   </Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[79px] p-0.5 rounded-lg">
-                      <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
+                    <ul className="  top-[33px] p-0.5 rounded-lg">
+                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
                         <Link to={"/director-message"}>Director Message</Link>
                       </li>
-                      <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
+                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
                         <Link to={"/principal-message"}>Principal Message</Link>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li className=" cursor-pointer hover:text-blue-600">
+                <hr className=" border-black"/>
+                <li className=" cursor-pointer hover:text-blue-600  py-1 rounded px-2 ">
                   <Link to={"/library"}>Library</Link>
                 </li>
-                <li className=" cursor-pointer hover:text-blue-600">
+                <hr className=" border-black"/>
+                <li className=" cursor-pointer hover:text-blue-600  py-1 rounded px-2 ">
                   <Link to={"/student-activity"}>Student Activity</Link>
                 </li>
-                <li className=" cursor-pointer hover:text-blue-600">
+                <hr className=" border-black"/>
+                <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2 ">
                   <Link to={"/grade-11"}>Grade-11</Link>
                 </li>
-                <li className=" cursor-pointer group">
+                <hr className=" border-black"/>
+                <li className=" cursor-pointer group py-1 rounded px-2">
                   <Link>
                     Achievement <IoIosArrowDown className=" inline-block" />
                   </Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[390px] p-0.5 rounded-lg">
-                      <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
+                    <ul className=" top-[321px] p-0.5 rounded-lg">
+                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
                         {" "}
                         <Link to={"/student-achievement"}>
                           Student Achievement
                         </Link>
                       </li>
-                      <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
+                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
                         <Link to={"/teacher-achievement"}>
                           Teacher Achievement
                         </Link>
