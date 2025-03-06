@@ -63,19 +63,19 @@ function MobileView() {
             )}
           </div>
           {open && (
-            <div className="  w-full h-[75vh] bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
-              <nav className=" h-[600px] text-black text-sm px-4 py-2 flex items-center justify-center">
+            <div className="  w-full h-[55vh] bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
+              <nav className=" h-[450px] text-black text-sm px-4 py-2 flex items-center justify-center">
                 <ul className=" h-full flex flex-col justify-evenly gap-1 items-center">
                   <li className=" cursor-pointer group">
                     <Link>
                       About Us <IoIosArrowDown className=" inline-block" />
                     </Link>
                     <div className=" hidden group-hover:block">
-                      <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[275px] p-1 rounded-lg">
-                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600">
+                      <ul className=" bg-[rgba(255,255,255,0.2)] backdrop-blur-lg absolute top-[79px] p-0.5 rounded-lg">
+                        <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
                           <Link to={"/director-message"}>Director Message</Link>
                         </li>
-                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600">
+                        <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
                           <Link to={"/principal-message"}>
                             Principal Message
                           </Link>
@@ -97,14 +97,14 @@ function MobileView() {
                       Achievement <IoIosArrowDown className=" inline-block" />
                     </Link>
                     <div className=" hidden group-hover:block">
-                      <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[680px] p-1 rounded-lg">
-                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600">
+                      <ul className=" bg-[rgba(255,255,255,0.4)] backdrop-blur-lg absolute top-[390px] p-0.5 rounded-lg">
+                        <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
                           {" "}
                           <Link to={"/student-achievement"}>
                             Student Achievement
                           </Link>
                         </li>
-                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600">
+                        <li className=" cursor-pointer pb-1 text-sm hover:text-blue-600 px-2">
                           <Link to={"/teacher-achievement"}>
                             Teacher Achievement
                           </Link>
@@ -240,7 +240,7 @@ function LargeView() {
   return (
     <div className=" min-h-screen flex flex-col">
       <div className=" w-full bg-blue-500 rounded-sm py-2 px-2 ">
-        <Marquee className=" text-white text-base">
+        <Marquee className=" text-white lg:text-sm xl:text-base">
           <Tagline />
           <Tagline />
         </Marquee>
@@ -261,7 +261,7 @@ function LargeView() {
                   About Us <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
+                  <ul className=" absolute top-[54px] z-10 p-2 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
@@ -285,7 +285,7 @@ function LargeView() {
                   Achievement <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
+                  <ul className=" absolute top-[54px] z-10 p-1 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
                       <Link to={"/student-achievement"}>
                         Student Achievement

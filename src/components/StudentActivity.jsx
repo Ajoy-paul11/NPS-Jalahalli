@@ -204,7 +204,7 @@ function LargeView() {
   return (
     <div className=" min-h-screen flex flex-col">
       <div className=" w-full bg-blue-500 rounded-sm py-2 px-2 ">
-        <Marquee className=" text-white text-base">
+        <Marquee className=" text-white lg:text-sm xl:text-base">
           <Tagline />
           <Tagline />
         </Marquee>
@@ -225,7 +225,7 @@ function LargeView() {
                   About Us <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" absolute top-[55px] z-10 p-2 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
+                  <ul className=" absolute top-[54px] z-10 p-2 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
@@ -249,7 +249,7 @@ function LargeView() {
                   Achievement <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" absolute top-[55px] z-10 p-1 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
+                  <ul className=" absolute top-[54px] z-10 p-1 rounded-lg shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff]">
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
                       <Link to={"/student-achievement"}>
                         Student Achievement
