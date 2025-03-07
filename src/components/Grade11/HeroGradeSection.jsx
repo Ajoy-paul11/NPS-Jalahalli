@@ -40,7 +40,7 @@ function MobileView() {
             <TaglineSecondary />
           </Marquee>
         </div>
-        <div className=" p-1 cursor-pointer text-black absolute top-[110px] right-[1px]">
+        <div className=" p-1 cursor-pointer text-black absolute top-[105px] right-[1px]">
           {open ? (
             <RxCross1 className=" w-8 h-8" onClick={() => setOpen(!open)} />
           ) : (

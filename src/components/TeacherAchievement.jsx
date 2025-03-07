@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import jalahalli from "../assets/NPS-logo.jpg";
 import Marquee from "react-fast-marquee";
 import Tagline from "./Tagline";
@@ -15,7 +15,7 @@ import FormBackground from "./Form/FormBackground";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function MobileView() {
+function MobileView({containerRef}) {
   useEffect(() => {
     Aos.init({
       duration: 1500,
@@ -119,7 +119,7 @@ function MobileView() {
             <FormBackground />
           </div>
           <div className=" grid md:grid-cols-2 gap-8">
-            <div className=" ">
+            <div className=" " ref={containerRef}>
               <img
                 data-aos="zoom-in"
                 src={achievement1}
@@ -304,6 +304,51 @@ function ModalForm({ setOpen }) {
 function TeacherAchievement() {
   const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isOpen, setIsOpen] = useState(false);
+      const containerRef = useRef(null);
+      const [isVisible, setIsVisible] = useState(false);
+      const [hasPassed, setHasPassed] = useState(false);
+  
+      useEffect(() => {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              const entry = entries[0];
+      
+              if (entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+                setHasPassed(true);
+              } else if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                setHasPassed(false);
+              } else if (!entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+                setHasPassed(true);
+              } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                setHasPassed(false);
+              }
+      
+              setIsVisible(hasPassed);
+            },
+            {
+              threshold: [0.8, 0.2],
+              rootMargin: "0px",
+            }
+          );
+      
+          if (containerRef.current) {
+            observer.observe(containerRef.current);
+          }
+      
+          return () => {
+            if (containerRef.current) {
+              observer.unobserve(containerRef.current);
+            }
+            observer.disconnect();
+          };
+        }, [hasPassed]);
+      
+        useEffect(() => {
+          setIsVisible(hasPassed);
+        }, [hasPassed]);
+      
+        const buttonText = "ADMISSION";
 
   useEffect(() => {
     const handleResize = () => {
@@ -326,8 +371,49 @@ function TeacherAchievement() {
 
   return (
     <>
+    {isVisible && (
+        <button
+          className={`fixed right-0 top-[40%] bg-blue-500 text-white z-50 p-1.5 lg:p-2.5 rounded-l-md shadow-lg transition-all duration-300 ease-in-out ${
+            isOpen ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
+          }`}
+          onClick={() => setIsOpen(true)}
+        >
+          <div className="flex flex-col items-center">
+            {buttonText.split("\n").map((word, wordIndex) => (
+              <React.Fragment key={wordIndex}>
+                {word.split("").map((char, charIndex) => (
+                  <span
+                    key={`${wordIndex}-${charIndex}`}
+                    className="text-xs lg:text-sm font-semibold"
+                  >
+                    {char}
+                  </span>
+                ))}
+                {wordIndex === 0 && <div className="h-1 lg:h-2" />}{" "}
+                {/* Add space between words */}
+              </React.Fragment>
+            ))}
+          </div>
+        </button>
+      )}
+
+      {isOpen && (
+        <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-white/50">
+          <div className=" relative  mx-auto">
+            <div className=" relative rounded-lg shadow-xl bg-slate-500">
+              <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
+                <RxCross2
+                  className=" text-white h-6 w-6 hover:text-black duration-200"
+                  onClick={() => setIsOpen(false)}
+                />
+              </div>
+              <FormBackground />
+            </div>
+          </div>
+        </div>
+      )}
       {open ? <ModalForm setOpen={setOpen} /> : ""}
-      <div>{windowWidth < 1024 ? <MobileView /> : <LargeView />}</div>;
+      <div>{windowWidth < 1024 ? <MobileView containerRef={containerRef}/> : <LargeView />}</div>;
     </>
   );
 }

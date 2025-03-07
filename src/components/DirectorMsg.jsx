@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import jalahalli from "../assets/NPS-logo.jpg";
 import Marquee from "react-fast-marquee";
 import FormAdmission from "./Form/Form";
@@ -12,14 +12,15 @@ import director from "../assets/nps-director.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
+import { RxCross2 } from "react-icons/rx";
+import FormBackground from "./Form/FormBackground";
 
 function MobileView() {
   useEffect(() => {
     Aos.init({
       duration: 2000,
     });
-  })
+  });
   const [open, setOpen] = useState(false);
 
   return (
@@ -43,7 +44,7 @@ function MobileView() {
             <Tagline />
           </Marquee>
         </div>
-        <div className=" p-1 cursor-pointer text-black absolute top-[105px] right-[1px]">
+        <div className=" p-1 cursor-pointer text-blue absolute top-[105px] right-[1px]">
           {open ? (
             <RxCross1 className=" w-8 h-8" onClick={() => setOpen(!open)} />
           ) : (
@@ -72,19 +73,19 @@ function MobileView() {
                     </ul>
                   </div>
                 </li>
-                <hr className=" border-black"/>
+                <hr className=" border-black" />
                 <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2">
                   <Link to={"/library"}>Library</Link>
                 </li>
-                <hr className=" border-black"/>
+                <hr className=" border-black" />
                 <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2">
                   <Link to={"/student-activity"}>Student Activity</Link>
                 </li>
-                <hr className=" border-black"/>
+                <hr className=" border-black" />
                 <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2">
                   <Link to={"/grade-11"}>Grade-11</Link>
                 </li>
-                <hr className=" border-black"/>
+                <hr className=" border-black" />
                 <li className=" cursor-pointer group py-1 rounded px-2">
                   <Link>
                     Achievement <IoIosArrowDown className=" inline-block" />
@@ -92,10 +93,14 @@ function MobileView() {
                   <div className=" hidden group-hover:block">
                     <ul className="  top-[321px] p-0.5 rounded-lg">
                       <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
-                        <Link to={"/student-achievement"}>Student Achievement</Link>
+                        <Link to={"/student-achievement"}>
+                          Student Achievement
+                        </Link>
                       </li>
                       <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
-                        <Link to={"/teacher-achievement"}>Teacher Achievement</Link>
+                        <Link to={"/teacher-achievement"}>
+                          Teacher Achievement
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -107,7 +112,10 @@ function MobileView() {
       </div>
 
       <div className=" md:absolute lg:top-[170px] xl:top-[240px] 2xl:top-[250px] md:left-[120px] lg:left-[190px] xl:left-[170px] 2xl:left-[330px]">
-        <h1 data-aos="slide-right" className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center">
+        <h1
+          data-aos="slide-right"
+          className=" text-2xl md:text-3xl lg:text-4xl text-white font-bold text-center"
+        >
           Academic <span className=" text-blue"> Director's </span> Message
         </h1>
       </div>
@@ -125,7 +133,7 @@ function LargeView() {
     Aos.init({
       duration: 2000,
     });
-  })
+  });
   return (
     <div
       style={{
@@ -181,10 +189,14 @@ function LargeView() {
                 <div className=" hidden group-hover:block">
                   <ul className=" shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff] backdrop-blur-lg absolute top-[54px] p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
-                      <Link to={"/student-achievement"}>Student Achievement</Link>
+                      <Link to={"/student-achievement"}>
+                        Student Achievement
+                      </Link>
                     </li>
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
-                      <Link to={"/teacher-achievement"}>Teacher Achievement</Link>
+                      <Link to={"/teacher-achievement"}>
+                        Teacher Achievement
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -195,7 +207,10 @@ function LargeView() {
       </div>
 
       <div className=" md:absolute lg:top-[215px] xl:top-[170px] 2xl:top-[250px] md:left-[120px] lg:left-[140px] xl:left-[215px] 2xl:left-[330px]">
-        <h1 data-aos="slide-right" className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center">
+        <h1
+          data-aos="slide-right"
+          className=" text-2xl md:text-3xl xl:text-4xl text-white font-bold text-center"
+        >
           Academic <span className=" text-blue">Director's </span> Message
         </h1>
       </div>
@@ -210,6 +225,51 @@ function LargeView() {
 
 function DirectorMsg() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasPassed, setHasPassed] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+          setHasPassed(true);
+        } else if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
+          setHasPassed(false);
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+          setHasPassed(true);
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+          setHasPassed(false);
+        }
+
+        setIsVisible(hasPassed);
+      },
+      {
+        threshold: [0.9],
+        rootMargin: "-1px",
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+      observer.disconnect();
+    };
+  }, [hasPassed]);
+
+  useEffect(() => {
+    setIsVisible(hasPassed);
+  }, [hasPassed]);
+
+  const buttonText = "ADMISSION";
 
   useEffect(() => {
     const handleResize = () => {
@@ -224,6 +284,47 @@ function DirectorMsg() {
 
   return (
     <>
+      {isVisible && (
+        <button
+          className={`fixed right-0 top-[40%] bg-blue-500 text-white z-50 p-1.5 lg:p-2.5 rounded-l-md shadow-lg transition-all duration-300 ease-in-out ${
+            isOpen ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
+          }`}
+          onClick={() => setIsOpen(true)}
+        >
+          <div className="flex flex-col items-center">
+            {buttonText.split("\n").map((word, wordIndex) => (
+              <React.Fragment key={wordIndex}>
+                {word.split("").map((char, charIndex) => (
+                  <span
+                    key={`${wordIndex}-${charIndex}`}
+                    className="text-xs lg:text-sm font-semibold"
+                  >
+                    {char}
+                  </span>
+                ))}
+                {wordIndex === 0 && <div className="h-1 lg:h-2" />}{" "}
+                {/* Add space between words */}
+              </React.Fragment>
+            ))}
+          </div>
+        </button>
+      )}
+
+      {isOpen && (
+        <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-white/50">
+          <div className=" relative  mx-auto">
+            <div className=" relative rounded-lg shadow-xl bg-slate-500">
+              <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
+                <RxCross2
+                  className=" text-white h-6 w-6 hover:text-black duration-200"
+                  onClick={() => setIsOpen(false)}
+                />
+              </div>
+              <FormBackground />
+            </div>
+          </div>
+        </div>
+      )}
       <div>{windowWidth < 720 ? <MobileView /> : <LargeView />}</div>
       <div className=" container mx-auto lg:p-8 my-6 flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-8 bg-[#f4f5ff]">
         <div className=" w-full lg:w-1/3 xl:mx-8">
@@ -231,6 +332,7 @@ function DirectorMsg() {
             src={director}
             alt="chairman-image"
             className=" rounded-2xl mx-auto mt-8 lg:mt-0"
+            ref={containerRef}
           />
         </div>
         <div className=" w-full lg:w-2/3 px-4">

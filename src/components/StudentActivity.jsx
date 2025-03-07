@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import jalahalli from "../assets/NPS-logo.jpg";
 import Marquee from "react-fast-marquee";
 import Tagline from "./Tagline";
@@ -27,7 +27,7 @@ import FormBackground from "./Form/FormBackground";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function MobileView() {
+function MobileView({containerRef}) {
   useEffect(() => {
     Aos.init({
       duration: 1200,
@@ -83,19 +83,19 @@ function MobileView() {
                       </ul>
                     </div>
                   </li>
-                  <hr className=" border-black"/>
+                  <hr className=" border-black" />
                   <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2">
                     <Link to={"/library"}>Library</Link>
                   </li>
-                  <hr className=" border-black"/>
+                  <hr className=" border-black" />
                   <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2">
                     <Link to={"/student-activity"}>Student Activity</Link>
                   </li>
-                  <hr className=" border-black"/>
+                  <hr className=" border-black" />
                   <li className=" cursor-pointer hover:text-blue-600 py-1 rounded px-2">
                     <Link to={"/grade-11"}>Grade-11</Link>
                   </li>
-                  <hr className=" border-black"/>
+                  <hr className=" border-black" />
                   <li className=" cursor-pointer group py-1 rounded px-2">
                     <Link>
                       Achievement <IoIosArrowDown className=" inline-block" />
@@ -122,41 +122,69 @@ function MobileView() {
           )}
         </div>
       </div>
-      <div className="flex-1 bg-[#f4f5ff] flex relative">
+      <div className="flex-1 bg-[#f4f5ff] flex relative" >
         <div className=" w-full p-4 flex flex-col">
-          <h2 data-aos="slide-right" className=" text-3xl text-blue font-bold p-4 text-center">
+          <h2
+            data-aos="slide-right"
+            className=" text-3xl text-blue font-bold p-4 text-center"
+          >
             Student Activity
           </h2>
           <div className=" w-full top-[130px] h-[calc(100vh-130px)]  py-8 place-items-center lg:pl-0 xl:pl-8">
             <FormBackground />
           </div>
-          <div className=" grid md:grid-cols-2 gap-8">
-            <div className=" ">
-              <img data-aos="zoom-in" src={activity1} alt="activity-img" className=" rounded-lg" />
+          <div className=" grid md:grid-cols-2 gap-8" >
+            <div className=" " ref={containerRef}>
+              <img
+                data-aos="zoom-in"
+                src={activity1}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
               <img src={activity2} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className=" ">
-              <img data-aos="zoom-in" src={activity3} alt="activity-img" className=" rounded-lg" />
+              <img
+                data-aos="zoom-in"
+                src={activity3}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className=" ">
-              <img  src={activity4} alt="activity-img" className=" rounded-lg" />
+              <img src={activity4} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img data-aos="zoom-in" src={activity5} alt="activity-img" className=" rounded-lg" />
+              <img
+                data-aos="zoom-in"
+                src={activity5}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
               <img src={activity6} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img data-aos="zoom-in" src={activity7} alt="activity-img" className=" rounded-lg" />
+              <img
+                data-aos="zoom-in"
+                src={activity7}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
               <img src={activity8} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img data-aos="zoom-in" src={activity9} alt="activity-img" className=" rounded-lg" />
+              <img
+                data-aos="zoom-in"
+                src={activity9}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
               <img
@@ -167,7 +195,7 @@ function MobileView() {
             </div>
             <div className="">
               <img
-              data-aos="zoom-in"
+                data-aos="zoom-in"
                 src={activity11}
                 alt="activity-img"
                 className=" rounded-lg"
@@ -181,13 +209,23 @@ function MobileView() {
               />
             </div>
             <div className="">
-              <img data-aos="zoom-in" src={yoga3} alt="activity-img" className=" rounded-lg" />
+              <img
+                data-aos="zoom-in"
+                src={yoga3}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
               <img src={yoga4} alt="activity-img" className=" rounded-lg" />
             </div>
             <div className="">
-              <img data-aos="zoom-in" src={yoga5} alt="activity-img" className=" rounded-lg" />
+              <img
+                data-aos="zoom-in"
+                src={yoga5}
+                alt="activity-img"
+                className=" rounded-lg"
+              />
             </div>
             <div className="">
               <img src={yoga6} alt="activity-img" className=" rounded-lg" />
@@ -273,7 +311,10 @@ function LargeView() {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
-          <h2 data-aos="slide-right" className=" text-4xl text-blue font-bold p-6 text-center">
+          <h2
+            data-aos="slide-right"
+            className=" text-4xl text-blue font-bold p-6 text-center"
+          >
             Student Activity
           </h2>
           <div className=" grid grid-cols-2 md:grid-cols-2 gap-8 place-items-center px-6 mt-16">
@@ -428,6 +469,51 @@ function ModalForm({ setOpen }) {
 function StudentActivity() {
   const [open, setOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasPassed, setHasPassed] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+          setHasPassed(true);
+        } else if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
+          setHasPassed(false);
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top <= 0) {
+          setHasPassed(true);
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+          setHasPassed(false);
+        }
+
+        setIsVisible(hasPassed);
+      },
+      {
+        threshold: [0.8, 0.2],
+        rootMargin: "0px",
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+      observer.disconnect();
+    };
+  }, [hasPassed]);
+
+  useEffect(() => {
+    setIsVisible(hasPassed);
+  }, [hasPassed]);
+
+  const buttonText = "ADMISSION";
 
   useEffect(() => {
     const handleResize = () => {
@@ -450,8 +536,49 @@ function StudentActivity() {
 
   return (
     <div>
+      {isVisible && (
+        <button
+          className={`fixed right-0 top-[40%] bg-blue-500 text-white z-50 p-1.5 lg:p-2.5 rounded-l-md shadow-lg transition-all duration-300 ease-in-out ${
+            isOpen ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
+          }`}
+          onClick={() => setIsOpen(true)}
+        >
+          <div className="flex flex-col items-center">
+            {buttonText.split("\n").map((word, wordIndex) => (
+              <React.Fragment key={wordIndex}>
+                {word.split("").map((char, charIndex) => (
+                  <span
+                    key={`${wordIndex}-${charIndex}`}
+                    className="text-xs lg:text-sm font-semibold"
+                  >
+                    {char}
+                  </span>
+                ))}
+                {wordIndex === 0 && <div className="h-1 lg:h-2" />}{" "}
+                {/* Add space between words */}
+              </React.Fragment>
+            ))}
+          </div>
+        </button>
+      )}
+
+      {isOpen && (
+        <div className=" fixed inset-0 flex items-center justify-center overflow-hidden z-10 bg-white/50">
+          <div className=" relative  mx-auto">
+            <div className=" relative rounded-lg shadow-xl bg-slate-500">
+              <div className=" absolute right-1 top-3 z-10 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full">
+                <RxCross2
+                  className=" text-white h-6 w-6 hover:text-black duration-200"
+                  onClick={() => setIsOpen(false)}
+                />
+              </div>
+              <FormBackground />
+            </div>
+          </div>
+        </div>
+      )}
       {open ? <ModalForm setOpen={setOpen} /> : ""}
-      <div>{windowWidth < 1024 ? <MobileView /> : <LargeView />}</div>
+      <div>{windowWidth < 1024 ? <MobileView containerRef={containerRef}/> : <LargeView />}</div>
     </div>
   );
 }
