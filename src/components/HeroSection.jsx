@@ -146,7 +146,7 @@ function LargeView() {
                   About Us <IoIosArrowDown className=" inline-block" />
                 </Link>
                 <div className=" hidden group-hover:block">
-                  <ul className=" shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff] backdrop-blur-lg absolute top-[54px] p-2 rounded-lg">
+                  <ul className=" shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] bg-[#f4f5ff] backdrop-blur-lg absolute top-[54px] p-1 rounded-lg">
                     <li className=" cursor-pointer p-1 text-base hover:text-blue-600">
                       <Link to={"/director-message"}>Director Message</Link>
                     </li>
