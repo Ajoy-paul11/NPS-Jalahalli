@@ -52,7 +52,7 @@ function MobileView() {
         </div>
         {open && (
           <div className=" w-full h-fit bg-[rgba(255,255,255,0.7)] backdrop-blur-lg">
-            <nav className=" text-black text-xs px-4 py-2 flex w-full">
+            <nav className=" text-black text-sm px-4 py-2 flex w-full">
               <ul className=" h-full flex flex-col gap-0.5 w-full">
                 <li className=" cursor-pointer px-2">
                   <Link to={"/"}>Home</Link>
@@ -63,11 +63,11 @@ function MobileView() {
                     About Us <IoIosArrowDown className=" inline-block" />
                   </Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" top-[33px] p-0.5 rounded-lg">
-                      <li className="  cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                    <ul className=" top-[33px] p-1 rounded-lg">
+                      <li className="  cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                         <Link to={"/director-message"}>Director Message</Link>
                       </li>
-                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                      <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                         <Link to={"/principal-message"}>Principal Message</Link>
                       </li>
                     </ul>
@@ -87,13 +87,13 @@ function MobileView() {
                     Achievement <IoIosArrowDown className=" inline-block" />
                   </Link>
                   <div className=" hidden group-hover:block">
-                    <ul className=" top-[321px] p-0.5 rounded-lg">
-                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                    <ul className=" top-[321px] p-1 rounded-lg">
+                      <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                         <Link to={"/student-achievement"}>
                           Student Achievement
                         </Link>
                       </li>
-                      <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                      <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                         <Link to={"/teacher-achievement"}>
                           Teacher Achievement
                         </Link>

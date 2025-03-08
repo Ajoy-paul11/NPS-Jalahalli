@@ -64,18 +64,18 @@ function MobileView({containerRef}) {
           </div>
           {open && (
             <div className="  w-full h-fit bg-[rgba(255,255,255,0.4)] backdrop-blur-lg">
-              <nav className=" text-black text-xs px-4 py-2 flex w-full">
+              <nav className=" text-black text-sm px-4 py-2 flex w-full">
                 <ul className=" h-full flex flex-col gap-0.5 w-full">
                   <li className=" cursor-pointer group py-1 rounded px-2">
                     <Link>
                       About Us <IoIosArrowDown className=" inline-block" />
                     </Link>
                     <div className=" hidden group-hover:block">
-                      <ul className=" top-[33px] p-0.5 rounded-lg">
-                        <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                      <ul className=" top-[33px] p-1 rounded-lg">
+                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                           <Link to={"/director-message"}>Director Message</Link>
                         </li>
-                        <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                           <Link to={"/principal-message"}>
                             Principal Message
                           </Link>
@@ -101,14 +101,14 @@ function MobileView({containerRef}) {
                       Achievement <IoIosArrowDown className=" inline-block" />
                     </Link>
                     <div className=" hidden group-hover:block">
-                      <ul className=" top-[321px] p-0.5 rounded-lg">
-                        <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                      <ul className=" top-[321px] p-1 rounded-lg">
+                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                           {" "}
                           <Link to={"/student-achievement"}>
                             Student Achievement
                           </Link>
                         </li>
-                        <li className=" cursor-pointer pb-1.5 text-xs hover:text-blue-600 px-2">
+                        <li className=" cursor-pointer p-1 text-sm hover:text-blue-600 px-2">
                           <Link to={"/teacher-achievement"}>
                             Teacher Achievement
                           </Link>
@@ -124,7 +124,7 @@ function MobileView({containerRef}) {
       </div>
       <div className="flex-1 bg-[#f4f5ff] flex relative">
         <div className=" w-full p-4 flex flex-col">
-          <h2 data-aos="slide-right" className=" text-3xl text-blue font-bold p-4 text-center">
+          <h2 data-aos="zoom-in" className=" text-3xl text-blue font-bold p-4 text-center">
             Student Achievement
           </h2>
           <div className=" w-full top-[130px] h-[calc(100vh-130px)] py-8 place-items-center lg:pl-0 xl:pl-8">
@@ -310,7 +310,7 @@ function LargeView() {
       <div className="flex-1 bg-[#f4f5ff] flex relative z-0">
         <div className=" w-2/3 p-4 overflow-y-auto">
           <h2
-            data-aos="slide-right"
+            data-aos="zoom-in"
             className=" text-4xl text-blue font-bold p-6 text-center"
           >
             Student Achievement
