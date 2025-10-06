@@ -159,7 +159,7 @@ function FormBackground() {
     <div className=" w-[380px] lg:w-[330px] xl:w-[380px] overflow-hidden space-y-8 bg-gray-500 rounded-lg">
       <h2 className=" text-2xl text-center font-bold text-white my-4">
         Admission Form <br />
-        for <span className=" text-blue">2025-26</span>
+        for <span className=" text-blue">2026-27</span>
       </h2>
       <Form {...form}>
         <form
