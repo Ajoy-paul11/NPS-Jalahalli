@@ -140,10 +140,10 @@ In your form component, include the access key as a hidden input:
 ## Screenshots
 
 ### 🏠 Home Page
-![NPS Jalahalli Home Page](./screenshots/home.png)
+![NPS Jalahalli Home Page](./public/screenshots/home.png)
 
 ### 📚 Principal Message Page
-![NPS Jalahalli Principal Message Page](./screenshots/about.png)
+![NPS Jalahalli Principal Message Page](./public/screenshots/about.png)
 
 
 ## 🌐 Live Website
