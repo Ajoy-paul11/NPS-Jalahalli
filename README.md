@@ -137,13 +137,11 @@ In your form component, include the access key as a hidden input:
 
 - Optionally, wrap the submission in react-hook-form for validation and use react-toastify to show success/error messages.
 
-## Screenshots
+## 📸 Screenshots
 
-### 🏠 Home Page
-![NPS Jalahalli Home Page](./public/screenshots/home.png)
-
-### 📚 Principal Message Page
-![NPS Jalahalli Principal Message Page](./public/screenshots/about.png)
+| 🏠 Home Page | 📚 Principal Message Page |
+| ------------ | ------------------------ |
+| ![NPS Jalahalli Home Page](./public/screenshots/home.png) | ![NPS Jalahalli Principal Message Page](./public/screenshots/about.png) |
 
 
 ## 🌐 Live Website
